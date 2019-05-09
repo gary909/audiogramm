@@ -27,7 +27,7 @@ export default class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">MERN Boilerplate</h1>
+          <h1 className="App-title">PROJECT Anker</h1>
           <NavLink to="/" exact>Home</NavLink>
           <NavLink to="/countries">Countries</NavLink>
           <NavLink to="/add-country">Add country</NavLink>
