@@ -9,7 +9,9 @@ import Signup from './pages/Signup';
 import api from '../api';
 import logo from '../logo.png';
 import Test from './pages/Test';
-import Test2 from './pages/Test2';
+import Feed from './pages/Feed';
+import Search from './pages/Search';
+import Comments from './pages/Comments';
 
 export default class App extends Component {
   constructor(props) {
@@ -38,11 +40,13 @@ export default class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/countries" component={Countries} />
+            <Route path="/comments" component={Comments} />
             <Route path="/add-country" component={AddCountry} />
             <Route path="/test" component={Test} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
-            <Route path="/test2" component={Test2} />
+            <Route path="/feed" component={Feed} />
+            <Route path="/search" component={Search} />
             <Route path="/secret" component={Secret} />
             <Route render={() => <h2>404</h2>} />
           </Switch>
@@ -53,12 +57,14 @@ export default class App extends Component {
             <div class="App-Header"></div>
             <NavLink to="/" exact>Home</NavLink>
             <NavLink to="/countries">Countries</NavLink>
+            <NavLink to="/comments">Comments</NavLink>
             <NavLink to="/add-country">Add country</NavLink>
             <NavLink to="/test">Test</NavLink>
             {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
             {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
             {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
-            <NavLink to="/test2">Test2</NavLink>
+            <NavLink to="/feed">Feed</NavLink>
+            <NavLink to="/search">Search</NavLink>
             <NavLink to="/secret">Secret</NavLink>
           </div>
         </footer>
