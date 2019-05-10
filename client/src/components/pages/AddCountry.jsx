@@ -57,7 +57,7 @@ export default class AddCountry extends Component {
           Capitals: <input type="text" value={this.state.capitals} name="capitals" onChange={this.handleInputChange} /> <br />
           Area: <input type="number" value={this.state.area} name="area" onChange={this.handleInputChange} /> <br />
           Description: <textarea value={this.state.description} name="description" cols="30" rows="10" onChange={this.handleInputChange} ></textarea> <br />
-          <button onClick={(e) => this.handleClick(e)}>Create country</button>
+          <button className="button" onClick={(e) => this.handleClick(e)}>Create country</button>
         </form>
         {this.state.message && <div className="info">
           {this.state.message}
