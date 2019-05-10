@@ -9,7 +9,7 @@ export default class Search extends Component {
   render() {
     return (
       <div className="Search">
-        <h2>Find Me Here</h2>
+        <h4>Find Me Here</h4>
         <p>I'm searching for a friend</p>
       </div>
     );

@@ -9,7 +9,7 @@ export default class Test extends Component {
   render() {
     return (
       <div className="Test">
-        <h2>Testing Testing 123</h2>
+        <h4>Testing Testing 123</h4>
         <p>Please bloody work</p>
       </div>
     );

@@ -9,7 +9,7 @@ export default class Comments extends Component {
   render() {
     return (
       <div className="Comments">
-        <h2>It's not for me to say!</h2>
+        <h4>It's not for me to say!</h4>
         <p>Comment all you bloody like</p>
       </div>
     );

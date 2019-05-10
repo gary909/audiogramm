@@ -7,7 +7,7 @@ import Secret from './pages/Secret';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
-import logo from '../logo.png';
+// import logo from '../logo.png';
 import Test from './pages/Test';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
@@ -31,8 +31,8 @@ export default class App extends Component {
         <div className="App">
           <header className="App-header">
             <div className="Title-bar">
-              <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="App-title">PROJECT Anker</h1>
+              {/* <img src={logo} className="App-logo" alt="logo" /> */}
+              <h1 className="App-title">ANKER</h1>
             </div>
 
 

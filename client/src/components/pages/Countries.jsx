@@ -11,7 +11,7 @@ export default class Countries extends Component {
   render() {
     return (
       <div className="Countries">
-        <h2>List of countries</h2>
+        <h4>List of countries</h4>
         {this.state.countries.map(c => <li key={c._id}>{c.name}</li>)}
       </div>
     );

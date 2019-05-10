@@ -9,7 +9,7 @@ export default class Feed extends Component {
   render() {
     return (
       <div className="Feed">
-        <h2>Feed Me Here Please</h2>
+        <h4>Feed Me Here Please</h4>
         <p>Please bloody work.  Please Feed Me etc etc</p>
         <div class="carousel-container"></div>
       </div>

@@ -51,7 +51,7 @@ export default class AddCountry extends Component {
   render() {
     return (
       <div className="AddCountry">
-        <h2>Add country</h2>
+        <h4>Add country</h4>
         <form>
           Name: <input type="text" value={this.state.name} name="name" onChange={this.handleInputChange} /> <br />
           Capitals: <input type="text" value={this.state.capitals} name="capitals" onChange={this.handleInputChange} /> <br />

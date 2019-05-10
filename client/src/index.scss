@@ -1,6 +1,6 @@
 // --------------------
 // Definition of variables
-$primary: #212222; // Nav bar colour here
+$primary: #ffffff; // Heading Bar colour here
 
 
 // ----------------------------------------
@@ -22,8 +22,8 @@ $primary: #212222; // Nav bar colour here
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
-  background-color: rgb(71, 69, 69); // Main background Colour;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(0, 0, 0); // Main background Colour;
   color: white; // main body text colour
 }
 
@@ -70,38 +70,26 @@ body {
   .App-header {
     background-color: $primary;
     padding: 10px;
-    color: white; // Text colour of nav bar heading
-    margin: 10px;
+    color: rgb(0, 0, 0); // heading Text colour 
+    // margin: 10px;
     padding: 10px 20px;
-    border-radius: 10px; // Rounded corners
-    box-shadow:0 0 10px rgba(0,0,0,0.8); // Gives top panel a shadow
-
-    a {
-      color: white; // Text colour of nav bar
-      padding: 0 5px;
-      text-decoration: unset;
-    }
-
-    a.active {
-      font-weight: bold;
-    }
+    // border-radius: 10px; // Rounded corners
+    box-shadow:0 0 10px rgba(228, 227, 227, 0.8); // Gives top panel a shadow
   }
-
-
 
   .App-intro {
     font-size: large;
   }
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
+  // @keyframes App-logo-spin {
+  //   from {
+  //     transform: rotate(0deg);
+  //   }
 
-    to {
-      transform: rotate(360deg);
-    }
-  }
+  //   to {
+  //     transform: rotate(360deg);
+  //   }
+  // }
 }
 
 .nav {
@@ -113,14 +101,14 @@ body {
 .lowNav {
   text-align: center;
   height: 8vw;
-  background-color: #212222;
-  margin: 10px;
+  background-color: white;
+  // margin: 10px;
   padding: 10px 20px;
-  border-radius: 10px; // Rounded corners
-  box-shadow:0 0 15px rgba(0,0,0,0.8); // Gives bottom Nav panel a shadow
+  // border-radius: 10px; // Rounded corners
+  box-shadow:0 0 15px rgba(197, 197, 197, 0.8); // Gives bottom Nav panel a shadow
 
   a {
-    color: white; // Text colour of nav bar
+    color: rgb(0, 0, 0); // nav bar Text colour
     padding: 0 5px;
     font-size: 3vw; // Nav bar font responsive size
     text-decoration: unset;
