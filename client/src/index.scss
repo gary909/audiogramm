@@ -1,6 +1,6 @@
 // --------------------
 // Definition of variables
-$primary: #212222; // Nav bar colour here
+$primary: #ffffff; // Heading Bar colour here
 
 
 // ----------------------------------------
@@ -22,8 +22,8 @@ $primary: #212222; // Nav bar colour here
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-color: rgb(56, 54, 54); // Main background Colour;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(0, 0, 0); // Main background Colour;
   color: white; // main body text colour
 }
 
@@ -37,52 +37,85 @@ body {
 }
 
 .info.info-danger {
-  background-color: #e73f3f;
+  background-color: #8a8383; // Unauthorized login Sign
 }
 
 // --------------------
 // Style for App component
 .App {
   text-align: center;
-  bottom: 0px;
+  
+  .Title-bar {
+    display: flex;
+    // justify-content: space-between;
+  }
 
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
-
-  .App-header {
-    background-color: $primary;
-    padding: 20px;
-    color: white; // Text colour of nav bar heading
-
-    a {
-      color: white; // Text colour of nav bar
-      padding: 0 5px;
-      text-decoration: unset;
-    }
-
-    a.active {
-      font-weight: bold;
-    }
+    height: 8vw; // App logo size - responsive
+    justify-content: flex-start;
+    margin-right: 19vw;
+    margin-top: 8px;
+   
   }
 
   .App-title {
-    font-size: 1.5em;
+    font-size: 5vw; // titles font size
+    // display: flex;
+    justify-content: flex-end;
+  }
+
+
+
+  .App-header {
+    background-color: $primary;
+    padding: 10px;
+    color: rgb(0, 0, 0); // heading Text colour 
+    // margin: 10px;
+    padding: 10px 20px;
+    // border-radius: 10px; // Rounded corners
+    box-shadow:0 0 10px rgba(228, 227, 227, 0.8); // Gives top panel a shadow
   }
 
   .App-intro {
     font-size: large;
   }
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
+  // @keyframes App-logo-spin {
+  //   from {
+  //     transform: rotate(0deg);
+  //   }
 
-    to {
-      transform: rotate(360deg);
-    }
+  //   to {
+  //     transform: rotate(360deg);
+  //   }
+  // }
+}
+
+.nav {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+.lowNav {
+  text-align: center;
+  height: 8vw;
+  background-color: white;
+  // margin: 10px;
+  padding: 10px 20px;
+  // border-radius: 10px; // Rounded corners
+  box-shadow:0 0 15px rgba(197, 197, 197, 0.8); // Gives bottom Nav panel a shadow
+
+  a {
+    color: rgb(0, 0, 0); // nav bar Text colour
+    padding: 0 5px;
+    font-size: 3vw; // Nav bar font responsive size
+    text-decoration: unset;
+  }
+
+  a.active {
+    font-weight: bold;
   }
 }
 
@@ -90,7 +123,7 @@ body {
 // Style for Home component
 .Home {
   p {
-    font-size: 1.2em;
+    font-size: 4vw;
   }
 }
 
@@ -98,7 +131,7 @@ body {
 // Style for Test component
 .Test {
   p {
-    font-size: 1.2em;
+    font-size: 4vw;
     
   }
 }
@@ -107,7 +140,8 @@ body {
 // Style for Secret component
 .Secret {
   .result {
-    font-size: 1.2em;
+    font-size: 4vw;
     color: $primary;
   }
 }
+
