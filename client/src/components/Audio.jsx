@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/* import React, { Component } from 'react';
 
 import ReactPlayer from 'react-player';
 
@@ -12,4 +12,4 @@ export default class Audio extends Component {
     }
 }
 
-//...
+//... */

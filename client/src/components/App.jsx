@@ -9,7 +9,7 @@ import Signup from './pages/Signup';
 import api from '../api';
 // import logo from '../logo.png';
 import Test from './pages/Test';
-import Audio from './Audio';
+/* import Audio from './Audio'; */
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
@@ -38,9 +38,6 @@ export default class App extends Component {
                     </header>
                     <Switch>
                         <Route path="/" exact component={Home} />
-                        <Route path="/countries" component={Countries} />
-                        <Route path="/comments" component={Comments} />
-                        <Route path="/add-country" component={AddCountry} />
                         <Route path="/test" component={Test} />
                         <Route path="/signup" component={Signup} />
                         <Route path="/login" component={Login} />
@@ -53,13 +50,13 @@ export default class App extends Component {
 
                 <footer className="nav">
                     <div className="lowNav">
-                        <div class="App-Header" />
+                        <div className="App-Header" />
                         <NavLink to="/" exact>
                             Home
                         </NavLink>
-                        <NavLink to="/countries">Countries</NavLink>
+
                         <NavLink to="/comments">Comments</NavLink>
-                        <NavLink to="/add-country">Add country</NavLink>
+
                         <NavLink to="/test">Test</NavLink>
                         {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
                         {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
