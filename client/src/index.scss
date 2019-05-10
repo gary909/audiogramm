@@ -1,6 +1,6 @@
 // --------------------
 // Definition of variables
-$primary: #32c3ff;
+$primary: #212222; // Nav bar colour here
 
 
 // ----------------------------------------
@@ -23,6 +23,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: rgb(56, 54, 54); // Main background Colour;
+  color: white; // main body text colour
 }
 
 .info {
@@ -42,6 +44,7 @@ body {
 // Style for App component
 .App {
   text-align: center;
+  bottom: 0px;
 
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -51,10 +54,10 @@ body {
   .App-header {
     background-color: $primary;
     padding: 20px;
-    color: white;
+    color: white; // Text colour of nav bar heading
 
     a {
-      color: white;
+      color: white; // Text colour of nav bar
       padding: 0 5px;
       text-decoration: unset;
     }
@@ -88,6 +91,15 @@ body {
 .Home {
   p {
     font-size: 1.2em;
+  }
+}
+
+// --------------------
+// Style for Test component
+.Test {
+  p {
+    font-size: 1.2em;
+    
   }
 }
 

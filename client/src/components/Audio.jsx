@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import ReactAudioPlayer from 'react-audio-player';
+import ReactPlayer from 'react-player';
 
-export default class audio extends Component {
+export default class Audio extends Component {
     render() {
         return (
             <div>
-                <ReactAudioPlayer src="my_audio_file.ogg" autoPlay controls />;
+                <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" playing />
             </div>
         );
     }
