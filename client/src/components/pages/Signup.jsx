@@ -42,7 +42,7 @@ export default class Signup extends Component {
           Username: <input type="text" value={this.state.username} name="username" onChange={this.handleInputChange} /> <br />
           Name: <input type="text" value={this.state.name} name="name" onChange={this.handleInputChange} /> <br />
           Password: <input type="password" value={this.state.password} name="password" onChange={this.handleInputChange} /> <br />
-          <button onClick={(e) => this.handleClick(e)}>Signup</button>
+          <button className="button" onClick={(e) => this.handleClick(e)}>Signup</button>
         </form>
         {this.state.message && <div className="info info-danger">
           {this.state.message}

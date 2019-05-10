@@ -32,7 +32,21 @@ export default class App extends Component {
           <header className="App-header">
             <div className="Title-bar">
               {/* <img src={logo} className="App-logo" alt="logo" /> */}
-              <h1 className="App-title">ANKER</h1>
+              {/* <h3 className="App-title" >ANKER</h3> */}
+              <div className="App-title">
+                <NavLink to="/" exact>ANKER</NavLink>
+              </div>
+
+              <div className="break"></div>
+
+              <div className="signup-nav highNav">
+                {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
+              </div>
+              <div className="login-nav highNav">
+                {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
+                {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
+              </div>
+
             </div>
 
 
@@ -55,14 +69,12 @@ export default class App extends Component {
         <footer className="nav">
           <div className="lowNav">
             <div class="App-Header"></div>
-            <NavLink to="/" exact>Home</NavLink>
+            {/* <NavLink to="/" exact>Home</NavLink> */}
             <NavLink to="/countries">Countries</NavLink>
             <NavLink to="/comments">Comments</NavLink>
             <NavLink to="/add-country">Add country</NavLink>
             <NavLink to="/test">Test</NavLink>
-            {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-            {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-            {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
+
             <NavLink to="/feed">Feed</NavLink>
             <NavLink to="/search">Search</NavLink>
             <NavLink to="/secret">Secret</NavLink>
