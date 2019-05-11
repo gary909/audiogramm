@@ -2,13 +2,12 @@
 // Definition of variables
 $primary: #ffffff; // Heading Bar colour here
 
-
 // ----------------------------------------
 // To install Boostrap:
 // 1) Run in the client folder: $ npm i bootstrap
 // 2) Import bootstrap with the following line
 // @import '../node_modules/bootstrap/scss/bootstrap.scss';
-// 
+//
 // To install Reactstrap:
 // 1) Run in the client folder: $ npm i reactstrap
 // 2) Go to the official documentation and take some examples: https://reactstrap.github.io/
@@ -16,28 +15,27 @@ $primary: #ffffff; // Heading Bar colour here
 // <Button color="danger">Danger!</Button>
 // ----------------------------------------
 
-
 // --------------------
 // Style reusable for all components
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: rgb(0, 0, 0); // Main background Colour;
-  color: white; // main body text colour
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(0, 0, 0); // Main background Colour;
+    color: white; // main body text colour
 }
 
 .info {
-  margin: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: #5776e9;
-  color: white;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #5776e9;
+    color: white;
 }
 
 .info.info-danger {
-  background-color: #8a8383; // Unauthorized login Sign
+    background-color: #8a8383; // Unauthorized login Sign
 }
 
 // --------------------
@@ -214,3 +212,6 @@ body {
   }
 }
 
+.record-buttons {
+    background-color: white;
+}
