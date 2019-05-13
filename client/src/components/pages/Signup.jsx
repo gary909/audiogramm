@@ -37,27 +37,34 @@ export default class Signup extends Component {
 
     render() {
         return (
-            <div className="Signup">
+            <div className="signup">
                 {/* <h4>Signup</h4> */}
                 <form>
                     Username:{' '}
                     <input
+                        class="textfield"
                         type="text"
                         value={this.state.username}
                         name="username"
                         onChange={this.handleInputChange}
                     />{' '}
                     <br />
-                    Name:{' '}
-                    <input
-                        type="text"
-                        value={this.state.name}
-                        name="name"
-                        onChange={this.handleInputChange}
-                    />{' '}
+                    <br />
+                    <div class="name">
+                        {' '}
+                        Name:{' '}
+                        <input
+                            class="textfieldname"
+                            type="text"
+                            value={this.state.name}
+                            name="name"
+                            onChange={this.handleInputChange}
+                        />{' '}
+                    </div>
                     <br />
                     Password:{' '}
                     <input
+                        class="textfield"
                         type="password"
                         value={this.state.password}
                         name="password"

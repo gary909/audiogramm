@@ -1,17 +1,39 @@
 import React, { Component } from 'react';
 
 export default class Comments extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //   }
-  // }
-  render() {
-    return (
-      <div className="Comments">
-        <h4>It's not for me to say!</h4>
-        <p>Comment all you bloody like</p>
-      </div>
-    );
-  }
+    state = {
+        comment: 'add comment'
+    };
+
+    handleChange = event => {
+        const { value } = event.target;
+        this.setState({ comment: value });
+    };
+
+    handleSubmit = event => {
+        event.preventDefault();
+        this.setState({ comment: 'add comment' });
+    };
+
+    render() {
+        console.log(this.state.comment);
+        return (
+            <div className="comments">
+                <h4>It's not for me to say!</h4>
+                <p>Comment all you bloody like</p>
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        className="comments-field"
+                        value={this.state.comment}
+                        onChange={this.handleChange}
+                        name="comment"
+                        type="text"
+                    />
+                    <button class="comments-button" type="submit">
+                        post
+                    </button>
+                </form>
+            </div>
+        );
+    }
 }
