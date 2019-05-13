@@ -10,6 +10,8 @@ import Test from './pages/Test';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
+// import Countries from './pages/Countries';
+// import AddCountry from './pages/AddCountry';
 
 export default class App extends Component {
   constructor(props) {
@@ -51,9 +53,9 @@ export default class App extends Component {
           </header>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/countries" component={Countries} />
+            {/* <Route path="/countries" component={Countries} /> */}
             <Route path="/comments" component={Comments} />
-            <Route path="/add-country" component={AddCountry} />
+            {/* <Route path="/add-country" component={AddCountry} /> */}
             <Route path="/test" component={Test} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
