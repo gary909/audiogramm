@@ -85,15 +85,19 @@ body {
     }
 
     .signup-nav {
-        margin: 10px;
-        padding: 10px;
+        // margin-top: 10px;
+        padding-top: 15px;
+        margin: 5px;
+        // padding: 10px;
         // justify-content: flex-end;
         flex-grow: 1;
     }
 
     .login-nav {
-        margin: 10px;
-        padding: 10px;
+        // margin-top: 10px;
+        padding-top: 15px;
+        margin: 5px;
+        // padding: 5px;
         // justify-content: flex-end;
         flex-grow: 1;
     }
@@ -175,7 +179,7 @@ body {
 // Style for Home component
 .Home {
     p {
-        font-size: calc(10px + 3vw);
+        font-size: calc(10px + 1vw);
     }
 }
 
@@ -209,10 +213,23 @@ body {
     }
 }
 
+.audContrl {
+    background-color: white; // Remove this for fully rounded courners
+    border-radius: 5px;
+}
+
 .record-buttons {
-    background-color: white;
+    background-color: black;
 }
 
 .counter {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
 }

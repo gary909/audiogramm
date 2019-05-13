@@ -3,6 +3,7 @@ import Audio from '../Audio';
 import sound from './../../soundfiles/divver.mp3';
 import Counter from '../Counter';
 
+
 export default class Home extends Component {
     // constructor(props) {
     //   super(props)
@@ -13,10 +14,17 @@ export default class Home extends Component {
         return (
             <div className="Home">
                 <h4>Home</h4>
-                <p>This is a sample project with the MERN stack</p>
+                <p>Record audio hear (sic)</p>
                 <Audio />
-                <Counter />
-                <audio controls>
+
+                <div>
+                    {/* <div>
+                        <img src={require('../heart.png')} />
+                    </div> */}
+                    <Counter className="counter" />
+                </div>
+
+                <audio controls className="audContrl">
                     <source src={sound} type="audio/mpeg" />
                 </audio>
             </div>

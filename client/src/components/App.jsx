@@ -5,6 +5,7 @@ import Secret from './pages/Secret';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
+// import heart from '../heart.png';
 // import logo from '../logo.png';
 import Test from './pages/Test';
 import Feed from './pages/Feed';

@@ -13,7 +13,7 @@ class Counter extends Component {
         return (
             <div>
                 <button class="counter" onClick={this.handleClick}>
-                    {this.state.count}
+                    <i class="far fa-heart"></i>    {this.state.count}
                 </button>
             </div>
         );
