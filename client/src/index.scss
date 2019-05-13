@@ -41,177 +41,178 @@ body {
 // --------------------
 // Style for App component
 .App {
-  text-align: center;
-  
-  .Title-bar {
-    display: flex;
-    // justify-content: space-between;
-  }
+    text-align: center;
 
-  // .App-logo {
-  //   animation: App-logo-spin infinite 20s linear;
-  //   height: 8vw; // App logo size - responsive
-  //   justify-content: flex-start;
-  //   margin-right: 19vw;
-  //   margin-top: 8px;
-   
-  // }
-
-  .App-title {
-    // font-size: 5vw; // titles font size
-    font-size: calc(10px + 3vw);
-    flex-grow: 1;
-    margin-top: 5px;
-    margin: 10px;
-    padding: 10px;
-    
-    a {
-      color: rgb(0, 0, 0); // nav bar Text colour
-      // vertical-align: middle;
-      // font-size: 3vw; // Nav bar font responsive size
-      font-weight: bold;
-      text-decoration: unset;
+    .Title-bar {
+        display: flex;
+        // justify-content: space-between;
     }
-  
-    a.active {
-      font-weight: bold;
-      
+
+    // .App-logo {
+    //   animation: App-logo-spin infinite 20s linear;
+    //   height: 8vw; // App logo size - responsive
+    //   justify-content: flex-start;
+    //   margin-right: 19vw;
+    //   margin-top: 8px;
+
+    // }
+
+    .App-title {
+        // font-size: 5vw; // titles font size
+        font-size: calc(10px + 3vw);
+        flex-grow: 1;
+        margin-top: 5px;
+        margin: 10px;
+        padding: 10px;
+
+        a {
+            color: rgb(0, 0, 0); // nav bar Text colour
+            // vertical-align: middle;
+            // font-size: 3vw; // Nav bar font responsive size
+            font-weight: bold;
+            text-decoration: unset;
+        }
+
+        a.active {
+            font-weight: bold;
+        }
+        // display: flex;
+        // justify-content: flex-end;
     }
-    // display: flex;
-    // justify-content: flex-end;
-  }
 
-  .break {
-    flex-grow: 8;
-  }
+    .break {
+        flex-grow: 8;
+    }
 
-  .signup-nav {
-    margin: 10px;
-    padding: 10px;
-    // justify-content: flex-end;
-    flex-grow: 1;
-  }
+    .signup-nav {
+        margin: 10px;
+        padding: 10px;
+        // justify-content: flex-end;
+        flex-grow: 1;
+    }
 
-  .login-nav {
-    margin: 10px;
-    padding: 10px;
-    // justify-content: flex-end;
-    flex-grow: 1;
-  }
+    .login-nav {
+        margin: 10px;
+        padding: 10px;
+        // justify-content: flex-end;
+        flex-grow: 1;
+    }
 
+    .App-header {
+        background-color: $primary;
+        // padding: 10px;
+        color: rgb(0, 0, 0); // heading Text colour
+        // margin: 10px;
+        padding: 2px 10px;
+        // border-radius: 10px; // Rounded corners
+        box-shadow: 0 0 10px rgba(228, 227, 227, 0.8); // Gives top panel a shadow
+    }
 
-  .App-header {
-    background-color: $primary;
-    // padding: 10px;
-    color: rgb(0, 0, 0); // heading Text colour 
-    // margin: 10px;
-    padding: 2px 10px;
-    // border-radius: 10px; // Rounded corners
-    box-shadow:0 0 10px rgba(228, 227, 227, 0.8); // Gives top panel a shadow
-  }
+    .App-intro {
+        font-size: calc(10px + 3vw);
+    }
 
-  .App-intro {
-    font-size: calc(10px + 3vw);
-  }
+    // @keyframes App-logo-spin {
+    //   from {
+    //     transform: rotate(0deg);
+    //   }
 
-  // @keyframes App-logo-spin {
-  //   from {
-  //     transform: rotate(0deg);
-  //   }
-
-  //   to {
-  //     transform: rotate(360deg);
-  //   }
-  // }
+    //   to {
+    //     transform: rotate(360deg);
+    //   }
+    // }
 }
 
 .highNav {
-  text-align: center;
-  height: 5vw;
-  background-color: white;
-  // margin: 10px;
-  padding: 2px 10px;
-  // border-radius: 10px; // Rounded corners
-  // box-shadow:0 0 15px rgba(197, 197, 197, 0.8); // Gives bottom Nav panel a shadow
+    text-align: center;
+    height: 5vw;
+    background-color: white;
+    // margin: 10px;
+    padding: 2px 10px;
+    // border-radius: 10px; // Rounded corners
+    // box-shadow:0 0 15px rgba(197, 197, 197, 0.8); // Gives bottom Nav panel a shadow
 
-  a {
-    color: rgb(0, 0, 0); // nav bar Text colour
-    padding: 0 5px;
-    font-size: calc(7px + 1vw); // Nav bar font responsive size
-    text-decoration: unset;
-  }
+    a {
+        color: rgb(0, 0, 0); // nav bar Text colour
+        padding: 0 5px;
+        font-size: calc(7px + 1vw); // Nav bar font responsive size
+        text-decoration: unset;
+    }
 
-  a.active {
-    font-weight: bold;
-  }
+    a.active {
+        font-weight: bold;
+    }
 }
 
 .nav {
-  position:absolute;
-  bottom:0; // puts nav bar at bottom of page
-  width:100%;
+    position: absolute;
+    bottom: 0; // puts nav bar at bottom of page
+    width: 100%;
 }
 
 .lowNav {
-  text-align: center;
-  height: 8vw;
-  background-color: white;
-  // margin: 10px;
-  padding: 10px 10px;
-  // border-radius: 10px; // Rounded corners
-  box-shadow:0 0 15px rgba(197, 197, 197, 0.8); // Gives bottom Nav panel a shadow
+    text-align: center;
+    height: 5vw;
+    background-color: white;
+    // margin: 10px;
+    padding: 10px 20px;
+    // border-radius: 10px; // Rounded corners
+    box-shadow: 0 0 15px rgba(197, 197, 197, 0.8); // Gives bottom Nav panel a shadow
 
-  a {
-    color: rgb(0, 0, 0); // nav bar Text colour
-    padding: 0 5px;
-    font-size: calc(7px + 1vw);// Nav bar font responsive size
-    text-decoration: unset;
-  }
+    a {
+        color: rgb(0, 0, 0); // nav bar Text colour
+        padding: 0 5px;
+        font-size: calc(7px + 1vw); // Nav bar font responsive size
+        text-decoration: unset;
+    }
 
-  a.active {
-    font-weight: bold;
-  }
+    a.active {
+        font-weight: bold;
+    }
 }
 
 // --------------------
 // Style for Home component
 .Home {
-  p {
-    font-size: calc(10px + 1vw);
-  }
+    p {
+        font-size: calc(10px + 3vw);
+    }
 }
 
 // --------------------
 // Style for Test component
 .Test {
-  p {
-    font-size: calc(10px + 1vw);
-    
-  }
+    p {
+        font-size: calc(10px + 3vw);
+    }
 }
 
 .button {
-  background-color: rgb(0, 14, 207); /* Green */
-  border: none;
-  color: white;
-  padding: 10px 22px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
-  margin: 5px;
+    background-color: rgb(0, 14, 207); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 // --------------------
 // Style for Secret component
 .Secret {
-  .result {
-    font-size: calc(10px + 1vw);
-    color: $primary;
-  }
+    .result {
+        font-size: calc(10px + 3vw);
+        color: $primary;
+    }
 }
 
 .record-buttons {
+    background-color: white;
+}
+
+.counter {
     background-color: white;
 }

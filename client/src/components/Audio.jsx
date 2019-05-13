@@ -40,7 +40,7 @@ export default class Example extends React.Component {
                     strokeColor="#000000"
                     backgroundColor="#FF4081"
                 />
-                <div class="record-buttons">
+                <div className="record-buttons">
                     <button onClick={this.startRecording} type="button">
                         Start
                     </button>

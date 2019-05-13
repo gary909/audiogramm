@@ -10,19 +10,18 @@ import Test from './pages/Test';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
-// import Countries from './pages/Countries';
-// import AddCountry from './pages/AddCountry';
+/* import Counter from './Counter'; */
 
 export default class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       countries: []
-    }
+    };
   }
 
   handleLogoutClick(e) {
-    api.logout()
+    api.logout();
   }
 
   render() {
@@ -34,28 +33,30 @@ export default class App extends Component {
               {/* <img src={logo} className="App-logo" alt="logo" /> */}
               {/* <h3 className="App-title" >ANKER</h3> */}
               <div className="App-title">
-                <NavLink to="/" exact>ANKER</NavLink>
+                <NavLink to="/" exact>
+                  ANKER
+                                </NavLink>
               </div>
 
-              <div className="break"></div>
+              <div className="break" />
 
               <div className="signup-nav highNav">
                 {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
               </div>
               <div className="login-nav highNav">
                 {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-                {api.isLoggedIn() && <Link to="/" onClick={(e) => this.handleLogoutClick(e)}>Logout</Link>}
+                {api.isLoggedIn() && (
+                  <Link to="/" onClick={e => this.handleLogoutClick(e)}>
+                    Logout
+                                    </Link>
+                )}
               </div>
-
             </div>
-
-
           </header>
           <Switch>
             <Route path="/" exact component={Home} />
-            {/* <Route path="/countries" component={Countries} /> */}
             <Route path="/comments" component={Comments} />
-            {/* <Route path="/add-country" component={AddCountry} /> */}
+
             <Route path="/test" component={Test} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
@@ -68,18 +69,18 @@ export default class App extends Component {
 
         <footer className="nav">
           <div className="lowNav">
-            <div class="App-Header"></div>
+            <div className="App-Header" />
             {/* <NavLink to="/" exact>Home</NavLink> */}
-            <NavLink to="/countries">Countries</NavLink>
+
             <NavLink to="/comments">Comments</NavLink>
-            <NavLink to="/add-country">Add country</NavLink>
+
             <NavLink to="/test">Test</NavLink>
 
             <NavLink to="/feed">Feed</NavLink>
             <NavLink to="/search">Search</NavLink>
             <NavLink to="/secret">Secret</NavLink>
-          </div>
-        </footer>
+          </div >
+        </footer >
       </div >
     );
   }
