@@ -7,11 +7,26 @@ export default class Example extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            record: false
+            record: false,
+            countDownSeconds: 10
         };
     }
 
     startRecording = () => {
+        let seconds = this.state.countDownSeconds;
+        let myInterval = setInterval(() => {
+            seconds--;
+            this.setState({
+                countDownSeconds: seconds
+            });
+            if (this.state.countDownSeconds < 0 || !this.state.record) {
+                clearInterval(myInterval);
+                this.setState({
+                    countDownSeconds: 10
+                });
+            }
+        }, 1000);
+
         this.setState({
             record: true
         });
@@ -39,6 +54,7 @@ export default class Example extends React.Component {
     render() {
         return (
             <div>
+                {this.state.countDownSeconds}
                 <ReactMic
                     record={this.state.record}
                     className="sound-wave"
@@ -48,12 +64,21 @@ export default class Example extends React.Component {
                     backgroundColor="#FF4081"
                 />
                 <div className="record-buttons">
+                    <button
+                        type="button"
+                        onMouseDown={this.startRecording}
+                        /* onMouseDown={this.startCountDown} */
+                        onMouseUp={this.stopRecording}
+                    >
+                        Record!
+                    </button>
+                    {/* 
                     <button onClick={this.startRecording} type="button">
                         Start
                     </button>
                     <button onClick={this.stopRecording} type="button">
                         Stop
-                    </button>
+                    </button> */}
                 </div>
             </div>
         );
