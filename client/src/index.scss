@@ -27,7 +27,7 @@ body {
 
 .info {
     margin: 20px;
-    padding: 10px 20px;
+    padding: 10px 50px;
     border-radius: 10px;
     display: inline-block;
     background-color: #5776e9;
@@ -250,4 +250,29 @@ body {
     font-size: 16px;
     border-radius: 5px;
     margin: 5px;
+}
+
+.textfield {
+    width: 15vw;
+}
+
+.textfieldname {
+    width: 10vw;
+    padding-left: 5vw;
+}
+
+.nameform {
+    text-align: left;
+}
+.comments-button {
+    background-color: #ffffff;
+    color: blue;
+}
+
+.comments-field {
+    color: grey;
+}
+
+.comments {
+    margin-top: 150px;
 }
