@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Signup from './Signup';
+import Login from './Login';
 
 export default class Home extends Component {
     // constructor(props) {
@@ -9,8 +11,10 @@ export default class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <h4>Feed Me Here Please</h4>
-                <p>Please bloody work. Please Feed Me etc etc</p>
+                <h3>Audiogramm is a never heard audio-sharing community. </h3>
+                <Signup />
+                <p>Already part of the long tail?</p>
+                <Login />
             </div>
         );
     }
