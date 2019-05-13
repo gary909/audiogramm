@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Audio from '../Audio';
-import sound from './../../soundfiles/divver.mp3';
-import Counter from '../Counter';
 
 export default class Home extends Component {
     // constructor(props) {
@@ -12,17 +9,8 @@ export default class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <h4>Home</h4>
-                <p>Record audio hear (sic)</p>
-                <Audio />
-
-                <div>
-                    <Counter className="counter" />
-                </div>
-
-                <audio controls className="audContrl">
-                    <source src={sound} type="audio/mpeg" />
-                </audio>
+                <h4>Feed Me Here Please</h4>
+                <p>Please bloody work. Please Feed Me etc etc</p>
             </div>
         );
     }
