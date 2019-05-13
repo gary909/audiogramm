@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Audio from '../Audio';
-/* import sound from './../../soundfiles/divver.mp3'; */
+import sound from './../../soundfiles/divver.mp3';
+import Counter from '../Counter';
 
 export default class Home extends Component {
     // constructor(props) {
@@ -14,9 +15,10 @@ export default class Home extends Component {
                 <h2>Home</h2>
                 <p>This is a sample project with the MERN stack</p>
                 <Audio />
-                {/* <audio controls>
+                <Counter />
+                <audio controls>
                     <source src={sound} type="audio/mpeg" />
-                </audio> */}
+                </audio>
             </div>
         );
     }
