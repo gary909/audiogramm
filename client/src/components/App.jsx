@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
 import Home from './pages/Home';
-import Secret from './pages/Secret';
+import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
@@ -14,75 +14,85 @@ import Comments from './pages/Comments';
 /* import Counter from './Counter'; */
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      countries: []
-    };
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            countries: []
+        };
+    }
 
-  handleLogoutClick(e) {
-    api.logout();
-  }
+    handleLogoutClick(e) {
+        api.logout();
+    }
 
-  render() {
-    return (
-      <div>
-        <div className="App">
-          <header className="App-header">
-            <div className="Title-bar">
-              {/* <img src={logo} className="App-logo" alt="logo" /> */}
-              {/* <h3 className="App-title" >ANKER</h3> */}
-              <div className="App-title">
-                <NavLink to="/" exact>
-                  AUDIOGRAM
+    render() {
+        return (
+            <div>
+                <div className="App">
+                    <header className="App-header">
+                        <div className="Title-bar">
+                            {/* <img src={logo} className="App-logo" alt="logo" /> */}
+                            {/* <h3 className="App-title" >ANKER</h3> */}
+                            <div className="App-title">
+                                <NavLink to="/" exact>
+                                    AUDIOGRAM
                                 </NavLink>
-              </div>
+                            </div>
 
-              <div className="break" />
+                            <div className="break" />
 
-              <div className="signup-nav highNav">
-                {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-              </div>
-              <div className="login-nav highNav">
-                {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-                {api.isLoggedIn() && (
-                  <Link to="/" onClick={e => this.handleLogoutClick(e)}>
-                    Logout
+                            <div className="signup-nav highNav">
+                                {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
+                            </div>
+                            <div className="login-nav highNav">
+                                {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
+                                {api.isLoggedIn() && (
+                                    <Link to="/" onClick={e => this.handleLogoutClick(e)}>
+                                        Logout
                                     </Link>
-                )}
-              </div>
+                                )}
+                            </div>
+                        </div>
+                    </header>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/comments" component={Comments} />
+
+                        <Route path="/test" component={Test} />
+                        <Route path="/signup" component={Signup} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/feed" component={Feed} />
+                        <Route path="/search" component={Search} />
+                        <Route path="/profile" component={Profile} />
+                        <Route render={() => <h2>404</h2>} />
+                    </Switch>
+                </div>
+
+                <footer className="nav">
+                    <div className="lowNav">
+                        <div className="App-Header" />
+                        <NavLink to="/" exact>
+                            <i className="fas fa-home navIcon" />
+                        </NavLink>
+
+                        <NavLink to="/comments">
+                            <i className="far fa-comments navIcon" />
+                        </NavLink>
+
+                        {/* <NavLink to="/test">Test</NavLink> */}
+
+                        <NavLink to="/feed">
+                            <i className="fas fa-rss navIcon" />
+                        </NavLink>
+                        <NavLink to="/search">
+                            <i className="fas fa-search navIcon" />{' '}
+                        </NavLink>
+                        <NavLink to="/profile">
+                            <i className="fas fa-users navIcon" />
+                        </NavLink>
+                    </div>
+                </footer>
             </div>
-          </header>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/comments" component={Comments} />
-
-            <Route path="/test" component={Test} />
-            <Route path="/signup" component={Signup} />
-            <Route path="/login" component={Login} />
-            <Route path="/feed" component={Feed} />
-            <Route path="/search" component={Search} />
-            <Route path="/secret" component={Secret} />
-            <Route render={() => <h2>404</h2>} />
-          </Switch>
-        </div>
-
-        <footer className="nav">
-          <div className="lowNav">
-            <div className="App-Header" />
-            <NavLink to="/" exact><i className="fas fa-home navIcon"></i></NavLink>
-
-            <NavLink to="/comments"><i className="far fa-comments navIcon"></i></NavLink>
-
-            {/* <NavLink to="/test">Test</NavLink> */}
-
-            <NavLink to="/feed"><i className="fas fa-rss navIcon"></i></NavLink>
-            <NavLink to="/search"><i className="fas fa-search navIcon"></i> </NavLink>
-            <NavLink to="/secret"><i className="fas fa-users navIcon"></i></NavLink>
-          </div >
-        </footer >
-      </div >
-    );
-  }
+        );
+    }
 }

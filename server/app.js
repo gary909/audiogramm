@@ -65,8 +65,8 @@ app.use('/api/*', (req, res, next) => {
 });
 
 // For any other routes, redirect to the index.html file of React
-app.get((req, res) => {
-    res.sendFile(__dirname, '/public/index.html');
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 // Error handler
