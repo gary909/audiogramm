@@ -5,6 +5,7 @@ import Secret from './pages/Secret';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
+// import heart from '../heart.png';
 // import logo from '../logo.png';
 import Test from './pages/Test';
 import Feed from './pages/Feed';
@@ -13,75 +14,75 @@ import Comments from './pages/Comments';
 /* import Counter from './Counter'; */
 
 export default class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            countries: []
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: []
+    };
+  }
 
-    handleLogoutClick(e) {
-        api.logout();
-    }
+  handleLogoutClick(e) {
+    api.logout();
+  }
 
-    render() {
-        return (
-            <div>
-                <div className="App">
-                    <header className="App-header">
-                        <div className="Title-bar">
-                            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                            {/* <h3 className="App-title" >ANKER</h3> */}
-                            <div className="App-title">
-                                <NavLink to="/" exact>
-                                    ANKER
+  render() {
+    return (
+      <div>
+        <div className="App">
+          <header className="App-header">
+            <div className="Title-bar">
+              {/* <img src={logo} className="App-logo" alt="logo" /> */}
+              {/* <h3 className="App-title" >ANKER</h3> */}
+              <div className="App-title">
+                <NavLink to="/" exact>
+                  ANKER
                                 </NavLink>
-                            </div>
+              </div>
 
-                            <div className="break" />
+              <div className="break" />
 
-                            <div className="signup-nav highNav">
-                                {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
-                            </div>
-                            <div className="login-nav highNav">
-                                {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
-                                {api.isLoggedIn() && (
-                                    <Link to="/" onClick={e => this.handleLogoutClick(e)}>
-                                        Logout
+              <div className="signup-nav highNav">
+                {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
+              </div>
+              <div className="login-nav highNav">
+                {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
+                {api.isLoggedIn() && (
+                  <Link to="/" onClick={e => this.handleLogoutClick(e)}>
+                    Logout
                                     </Link>
-                                )}
-                            </div>
-                        </div>
-                    </header>
-                    <Switch>
-                        <Route path="/" exact component={Home} />
-                        <Route path="/comments" component={Comments} />
-
-                        <Route path="/test" component={Test} />
-                        <Route path="/signup" component={Signup} />
-                        <Route path="/login" component={Login} />
-                        <Route path="/feed" component={Feed} />
-                        <Route path="/search" component={Search} />
-                        <Route path="/secret" component={Secret} />
-                        <Route render={() => <h2>404</h2>} />
-                    </Switch>
-                </div>
-
-                <footer className="nav">
-                    <div className="lowNav">
-                        <div className="App-Header" />
-                        {/* <NavLink to="/" exact>Home</NavLink> */}
-
-                        <NavLink to="/comments">Comments</NavLink>
-
-                        <NavLink to="/test">Test</NavLink>
-
-                        <NavLink to="/feed">Feed</NavLink>
-                        <NavLink to="/search">Search</NavLink>
-                        <NavLink to="/secret">Secret</NavLink>
-                    </div>
-                </footer>
+                )}
+              </div>
             </div>
-        );
-    }
+          </header>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/comments" component={Comments} />
+
+            <Route path="/test" component={Test} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/login" component={Login} />
+            <Route path="/feed" component={Feed} />
+            <Route path="/search" component={Search} />
+            <Route path="/secret" component={Secret} />
+            <Route render={() => <h2>404</h2>} />
+          </Switch>
+        </div>
+
+        <footer className="nav">
+          <div className="lowNav">
+            <div className="App-Header" />
+            {/* <NavLink to="/" exact>Home</NavLink> */}
+
+            <NavLink to="/comments">Comments</NavLink>
+
+            <NavLink to="/test">Test</NavLink>
+
+            <NavLink to="/feed">Feed</NavLink>
+            <NavLink to="/search">Search</NavLink>
+            <NavLink to="/secret">Secret</NavLink>
+          </div >
+        </footer >
+      </div >
+    );
+  }
 }
