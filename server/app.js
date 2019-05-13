@@ -24,7 +24,7 @@ app.use(nocache());
 app.use(
     cors({
         origin: (origin, cb) => {
-            cb(null, origin && origin.startsWith('http://localhost:'));
+            cb(null, origin && origin.startsWith('http://localhost:3000'));
         },
         optionsSuccessStatus: 200,
         credentials: true
@@ -52,8 +52,11 @@ require('./passport')(app);
 
 app.use('/api', require('./routes/index'));
 app.use('/api', require('./routes/auth'));
+// Changed from countries to thing-routes ?
 app.use('/api/countries', require('./routes/countries'));
-
+/* app.use('/api/thing-routes', require('./routes/thing-routes')); */
+// To Add here ?
+app.use('/api', require('./routes/file-upload-routes'));
 // For any routes that starts with "/api", catch 404 and forward to error handler
 app.use('/api/*', (req, res, next) => {
     let err = new Error('Not Found');
