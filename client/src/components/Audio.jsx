@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { ReactMic } from 'react-mic';
-
+/* import { set } from 'mongoose'; */
+/* import { maxHeaderSize } from 'http';
+ */
 export default class Example extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +15,11 @@ export default class Example extends React.Component {
         this.setState({
             record: true
         });
+        setTimeout(() => {
+            this.setState({
+                record: false
+            });
+        }, 10000);
     };
 
     stopRecording = () => {
