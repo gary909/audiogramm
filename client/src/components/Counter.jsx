@@ -10,7 +10,13 @@ class Counter extends Component {
         }));
     };
     render() {
-        return <button onClick={this.handleClick}>{this.state.count}</button>;
+        return (
+            <div>
+                <button class="counter" onClick={this.handleClick}>
+                    {this.state.count}
+                </button>
+            </div>
+        );
     }
 }
 

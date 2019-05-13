@@ -69,7 +69,7 @@ export default class App extends Component {
 
                 <footer className="nav">
                     <div className="lowNav">
-                        <div class="App-Header" />
+                        <div className="App-Header" />
                         {/* <NavLink to="/" exact>Home</NavLink> */}
 
                         <NavLink to="/comments">Comments</NavLink>
