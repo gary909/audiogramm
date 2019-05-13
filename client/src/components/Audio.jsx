@@ -61,17 +61,18 @@ export default class Example extends React.Component {
                     onStop={this.onStop}
                     onData={this.onData}
                     strokeColor="#000000"
-                    backgroundColor="#FF4081"
+                    backgroundColor="#FF4081" // Change the PINK wave background colour here
                 />
                 <div className="record-buttons">
-                    <button
+                    <button className="recButton"
                         type="button"
                         onMouseDown={this.startRecording}
                         /* onMouseDown={this.startCountDown} */
                         onMouseUp={this.stopRecording}
-                    >
-                        Record!
+                    ><i class="fas fa-microphone"></i>
+                        Record
                     </button>
+                    <button className="recButton"><i class="far fa-save"></i> Save</button>
                     {/* 
                     <button onClick={this.startRecording} type="button">
                         Start

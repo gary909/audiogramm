@@ -12,8 +12,8 @@ class Counter extends Component {
     render() {
         return (
             <div>
-                <button class="counter" onClick={this.handleClick}>
-                    <i class="far fa-heart"></i>    {this.state.count}
+                <button className="counter" onClick={this.handleClick}>
+                    <i className="far fa-heart"></i>    {this.state.count}
                 </button>
             </div>
         );
