@@ -3,7 +3,6 @@ import Audio from '../Audio';
 import sound from './../../soundfiles/divver.mp3';
 import Counter from '../Counter';
 
-
 export default class Home extends Component {
     // constructor(props) {
     //   super(props)
@@ -18,9 +17,6 @@ export default class Home extends Component {
                 <Audio />
 
                 <div>
-                    {/* <div>
-                        <img src={require('../heart.png')} />
-                    </div> */}
                     <Counter className="counter" />
                 </div>
 

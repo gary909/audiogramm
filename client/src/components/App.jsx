@@ -35,7 +35,7 @@ export default class App extends Component {
               {/* <h3 className="App-title" >ANKER</h3> */}
               <div className="App-title">
                 <NavLink to="/" exact>
-                  ANKER
+                  AUDIOGRAM
                                 </NavLink>
               </div>
 
@@ -71,15 +71,15 @@ export default class App extends Component {
         <footer className="nav">
           <div className="lowNav">
             <div className="App-Header" />
-            {/* <NavLink to="/" exact>Home</NavLink> */}
+            <NavLink to="/" exact><i className="fas fa-home navIcon"></i></NavLink>
 
-            <NavLink to="/comments">Comments</NavLink>
+            <NavLink to="/comments"><i className="far fa-comments navIcon"></i></NavLink>
 
-            <NavLink to="/test">Test</NavLink>
+            {/* <NavLink to="/test">Test</NavLink> */}
 
-            <NavLink to="/feed">Feed</NavLink>
-            <NavLink to="/search">Search</NavLink>
-            <NavLink to="/secret">Secret</NavLink>
+            <NavLink to="/feed"><i className="fas fa-rss navIcon"></i></NavLink>
+            <NavLink to="/search"><i className="fas fa-search navIcon"></i> </NavLink>
+            <NavLink to="/secret"><i className="fas fa-users navIcon"></i></NavLink>
           </div >
         </footer >
       </div >
