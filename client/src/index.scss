@@ -1,4 +1,4 @@
-    // --------------------
+// --------------------
 // Definition of variables
 $primary: #ffffff; // Heading Bar colour here
 
@@ -256,37 +256,35 @@ body {
     border: solid 1px red // Show the borders on page
 } */
 
-.audioWrapper{
-    display:flex;
+.audioWrapper {
+    display: flex;
     flex-direction: column;
-    height:20vh;
-    width: 90vw
+    height: 20vh;
+    width: 90vw;
 }
 
-.audioTitleWrapper{
-    display:flex;
+.audioTitleWrapper {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     margin-left: 10vw;
-    height:20vh;
-    width: 90vw
+    height: 20vh;
+    width: 90vw;
 }
 
-.audioTitle{
+.audioTitle {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.audioImage{
-    height:8vh
+.audioImage {
+    height: 8vh;
 }
-.audioFooter{
-    display:flex;
+.audioFooter {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between
+    justify-content: space-between;
 }
-
-
 
 .textfield {
     width: 15vw;

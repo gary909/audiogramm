@@ -12,7 +12,7 @@ var storage = cloudinaryStorage({
     cloudinary,
     folder: 'poster-gallery', // The name of the folder in cloudinary
     allowedFormats: ['mp3', 'ogg'],
-    params: { resource_type: 'video' },
+    params: { resource_type: 'raw', format: 'mp3' },
 
     filename: function(req, res, cb) {
         cb(null, res.originalname); // The file on cloudinary would have the same name as the original file name
