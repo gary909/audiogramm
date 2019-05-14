@@ -23,13 +23,13 @@ export default class Comments extends Component {
                 <p>Comment all you bloody like</p>
                 <form onSubmit={this.handleSubmit}>
                     <input
-                        className="comments-field"
+                        className="comments-field searchTerm"
                         value={this.state.comment}
                         onChange={this.handleChange}
                         name="comment"
                         type="text"
                     />
-                    <button className="comments-button" type="submit">
+                    <button className="comments-button searchButton" type="submit">
                         post
                     </button>
                 </form>

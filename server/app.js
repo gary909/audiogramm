@@ -53,7 +53,7 @@ require('./passport')(app);
 app.use('/api', require('./routes/index'));
 app.use('/api', require('./routes/auth'));
 // Changed from countries to thing-routes ?
-app.use('/api/countries', require('./routes/countries'));
+// app.use('/api/countries', require('./routes/countries'));
 /* app.use('/api/thing-routes', require('./routes/thing-routes')); */
 // To Add here ?
 app.use('/api', require('./routes/file-upload-routes'));
