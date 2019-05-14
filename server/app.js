@@ -56,6 +56,7 @@ app.use('/api', require('./routes/auth'));
 /* app.use('/api/thing-routes', require('./routes/thing-routes')); */
 // To Add here ?
 app.use('/api', require('./routes/file-upload-routes'));
+app.use('/api', require('./routes/comments'));
 // For any routes that starts with "/api", catch 404 and forward to error handler
 app.use('/api/*', (req, res, next) => {
     let err = new Error('Not Found');

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import api from '../../api';
 
 export default class Comments extends Component {
     state = {
-        comment: 'add comment'
+        comment: ''
     };
 
     handleChange = event => {
@@ -12,16 +13,19 @@ export default class Comments extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        this.setState({ comment: 'add comment' });
+        this.postComments();
+        this.setState({ comment: '' });
+        this.props.history.push('/playfeed');
     };
 
     handleClick = event => {
         event.preventDefault();
+    };
 
-        // api.postComment({comment})
-
-        // redirect
-        // this.props.history.push('/playfeed')
+    postComments = () => {
+        api.addComments({
+            comment: this.state.comment
+        });
     };
 
     render() {

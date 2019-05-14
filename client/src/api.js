@@ -88,14 +88,12 @@ export default {
             .get('/upload')
             .then(res => res.data)
             .catch(errHandler);
+    },
+
+    addComments(data) {
+        return service
+            .post('/comments', data)
+            .then(res => res.data)
+            .catch(errHandler);
     }
-
-
-
-addcomment(data) {
-  return service
-      .post('/comments', data)
-      .then(res => res.data)
-      .catch(errHandler);
-}
 };
