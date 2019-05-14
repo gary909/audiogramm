@@ -60,7 +60,7 @@ export default class Example extends React.Component {
         let formData = new FormData();
         formData.append('videoURL', file);
 
-        axios.post('http://localhost:5000/api/upload', formData).then(res => {
+        axios.post('http://localhost:5000/api/upload', formData, { withCredentials: true }).then(res => {
             console.log(res);
         });
         console.log('recordedBlob is: ', blob);
