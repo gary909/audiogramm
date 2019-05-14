@@ -11,11 +11,9 @@ import Test from './pages/Test';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
-// import PlayFeed from './PlayFeed';
+import PlayFeed from './PlayFeed'
 /* import axios from 'axios'; */
 /* import Counter from './Counter'; */
-
-
 
 export default class App extends Component {
     constructor(props) {
@@ -61,13 +59,13 @@ export default class App extends Component {
                     <Switch>
                         <Route path="/" exact component={Home} />
                         <Route path="/comments" component={Comments} />
-
                         <Route path="/test" component={Test} />
                         <Route path="/signup" component={Signup} />
                         <Route path="/login" component={Login} />
                         <Route path="/feed" component={Feed} />
                         <Route path="/search" component={Search} />
                         <Route path="/profile" component={Profile} />
+                        <Route path="/playfeed" component={PlayFeed} />
                         <Route render={() => <h2>404</h2>} />
                     </Switch>
                 </div>
@@ -94,6 +92,7 @@ export default class App extends Component {
                         <NavLink to="/profile">
                             <i className="fas fa-users navIcon" />
                         </NavLink>
+                        <NavLink to="/playfeed">PlayFeed</NavLink>
                     </div>
                 </footer>
             </div>
