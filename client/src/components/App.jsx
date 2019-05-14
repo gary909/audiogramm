@@ -11,6 +11,7 @@ import Test from './pages/Test';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
+/* import axios from 'axios'; */
 /* import Counter from './Counter'; */
 
 export default class App extends Component {

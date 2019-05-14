@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ReactMic } from 'react-mic';
+import axios from 'axios';
 /* import { set } from 'mongoose'; */
 /* import { maxHeaderSize } from 'http';
  */
@@ -47,8 +48,19 @@ export default class Example extends React.Component {
         console.log('chunk of real-time data is: ', recordedBlob);
     }
 
-    onStop(recordedBlob) {
-        console.log('recordedBlob is: ', recordedBlob);
+    onStop({ blob }) {
+        console.log('stop');
+
+        let file = new File([blob], 'videoURL');
+
+        let formData = new FormData();
+        formData.append('videoURL', file);
+
+        axios.post('http://localhost:5000/api/upload', formData).then(res => {
+            console.log(res);
+        });
+        console.log('recordedBlob is: ', blob);
+        console.log('formData: ', file);
     }
 
     render() {
@@ -64,15 +76,19 @@ export default class Example extends React.Component {
                     backgroundColor="#FF4081" // Change the PINK wave background colour here
                 />
                 <div className="record-buttons">
-                    <button className="recButton"
+                    <button
+                        className="recButton"
                         type="button"
                         onMouseDown={this.startRecording}
                         /* onMouseDown={this.startCountDown} */
                         onMouseUp={this.stopRecording}
-                    ><i class="fas fa-microphone"></i>
+                    >
+                        <i class="fas fa-microphone" />
                         Record
                     </button>
-                    <button className="recButton"><i class="far fa-save"></i> Save</button>
+                    <button className="recButton">
+                        <i class="far fa-save" /> Save
+                    </button>
                     {/* 
                     <button onClick={this.startRecording} type="button">
                         Start

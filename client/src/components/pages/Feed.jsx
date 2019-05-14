@@ -9,6 +9,13 @@ export default class Feed extends Component {
     //   this.state = {
     //   }
     // }
+
+    /* get the data from the database for the audio with this id
+
+    data: {
+        url: https://cloudinary.....mp3
+    } */
+
     render() {
         return (
             <div className="Feed">
