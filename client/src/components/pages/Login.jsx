@@ -36,6 +36,7 @@ export default class Login extends Component {
                     Username:{' '}
                     <input
                         type="text"
+                        className="searchBar"
                         value={this.state.username}
                         name="username"
                         onChange={this.handleInputChange}
@@ -44,6 +45,7 @@ export default class Login extends Component {
                     Password:{' '}
                     <input
                         type="password"
+                        className="searchBar"
                         value={this.state.password}
                         name="password"
                         onChange={this.handleInputChange}
