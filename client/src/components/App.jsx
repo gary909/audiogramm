@@ -11,9 +11,7 @@ import Test from './pages/Test';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
-import PlayFeed from './pages/PlayFeed';
-
-// import PlayFeed from './PlayFeed';
+import PlayFeed from './PlayFeed'git
 /* import axios from 'axios'; */
 /* import Counter from './Counter'; */
 
