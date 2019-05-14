@@ -20,17 +20,17 @@ export default class Search extends Component {
 
         /* Fake data. Must be changed when cloudinary is set up */
         let data0 = {
-            hashtag: 'FullofEnergie',
+            hashTag: 'FullofEnergie',
             userId: 'Sylvie',
             likes: '92813'
         };
         let data1 = {
-            hashtag: 'BrilliantMood',
+            hashTag: 'BrilliantMood',
             userId: 'Gary',
             likes: '12331'
         };
         let data2 = {
-            hashtag: 'Thor',
+            hashTag: 'Thor',
             userId: 'Thor',
             likes: '10240813'
         };

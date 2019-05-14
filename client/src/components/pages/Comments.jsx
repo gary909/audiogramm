@@ -15,6 +15,15 @@ export default class Comments extends Component {
         this.setState({ comment: 'add comment' });
     };
 
+    handleClick = event => {
+        event.preventDefault();
+
+        // api.postComment({comment})
+
+        // redirect
+        // this.props.history.push('/playfeed')
+    };
+
     render() {
         console.log(this.state.comment);
         return (
