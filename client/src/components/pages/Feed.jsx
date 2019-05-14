@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Audio from '../Audio';
-import sound from './../../soundfiles/divver.mp3';
 import Counter from '../Counter';
 import PlayFeed from './PlayFeed';
 

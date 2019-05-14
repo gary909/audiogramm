@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/* import React, { Component } from 'react';
 
 export default class Test extends Component {
   // constructor(props) {
@@ -14,4 +14,4 @@ export default class Test extends Component {
       </div>
     );
   }
-}
+} */
