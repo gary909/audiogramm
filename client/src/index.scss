@@ -291,8 +291,8 @@ body {
 }
 
 .textfieldname {
-    width: 10vw;
-    padding-left: 5vw;
+    width: 15vw;
+    // margin-left: 15vw;
 }
 
 .nameform {
@@ -309,6 +309,7 @@ body {
 
 .comments {
     margin-top: 150px;
+    
 }
 
 
@@ -316,14 +317,14 @@ body {
 
 //**********TEXT BOX STYLING**********
 .search {
-    width: 100%;
+    // width: 100%;
     position: relative;
-    display: flex;
+    // display: flex;
   }
   
   .searchTerm {
-    width: 100%;
-    border: 3px solid #00B4CC;
+    width: 40%;
+    border: 3px solid rgb(41, 28, 224);
     border-right: none;
     padding: 5px;
     height: 20px;
@@ -333,19 +334,19 @@ body {
   }
   
   .searchTerm:focus{
-    color: #00B4CC;
+    color: rgb(41, 28, 224);
   }
   
   .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
+    width: 60px;
+    height: 35px;
+    border: 2px solid rgb(41, 28, 224);
+    background: rgb(41, 28, 224);
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
   }
   
   /*Resize the wrap to see the search bar change!*/
@@ -357,3 +358,15 @@ body {
     transform: translate(-50%, -50%);
   }
   //**********END OF TEXT BOX STYLING**********
+
+  .searchBar {
+    width: 40%;
+    border: 3px solid rgb(111, 103, 228);
+    // border-right: none;
+    padding: 5px;
+    margin: 5px;
+    height: 20px;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    color: #9DBFAF;
+  }

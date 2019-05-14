@@ -42,7 +42,7 @@ export default class Signup extends Component {
                 <form>
                     Username:{' '}
                     <input
-                        className="textfield"
+                        className="textfield searchBar"
                         type="text"
                         value={this.state.username}
                         name="username"
@@ -54,7 +54,7 @@ export default class Signup extends Component {
                         {' '}
                         Name:{' '}
                         <input
-                            className="textfieldname"
+                            className="textfieldname searchBar"
                             type="text"
                             value={this.state.name}
                             name="name"
@@ -64,7 +64,7 @@ export default class Signup extends Component {
                     <br />
                     Password:{' '}
                     <input
-                        className="textfield"
+                        className="textfield searchBar"
                         type="password"
                         value={this.state.password}
                         name="password"
