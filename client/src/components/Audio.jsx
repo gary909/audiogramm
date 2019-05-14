@@ -4,6 +4,8 @@ import axios from 'axios';
 /* import { set } from 'mongoose'; */
 /* import { maxHeaderSize } from 'http';
  */
+
+
 export default class Example extends React.Component {
     constructor(props) {
         super(props);
@@ -12,6 +14,8 @@ export default class Example extends React.Component {
             countDownSeconds: 10
         };
     }
+
+
 
     startRecording = () => {
         let seconds = this.state.countDownSeconds;
@@ -83,12 +87,14 @@ export default class Example extends React.Component {
                         /* onMouseDown={this.startCountDown} */
                         onMouseUp={this.stopRecording}
                     >
-                        <i class="fas fa-microphone" />
+                        <i className="fas fa-microphone" />
                         Record
                     </button>
-                    <button className="recButton">
-                        <i class="far fa-save" /> Save
+
+                    <button className="recButton popup" onClick={this.handleClick}>
+                        <i className="far fa-save" /> Save <span className="popuptext" id="myPopup">Popup text...</span>
                     </button>
+
                     {/* 
                     <button onClick={this.startRecording} type="button">
                         Start
@@ -101,3 +107,5 @@ export default class Example extends React.Component {
         );
     }
 }
+
+
