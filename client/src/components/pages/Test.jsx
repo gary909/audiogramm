@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/* import React, { Component } from 'react';
 
 
 
@@ -9,4 +9,4 @@ export default class TextInput extends Component {
       <div className="field" />
     )
   }
-}
+} */

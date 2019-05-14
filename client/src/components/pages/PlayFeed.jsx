@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../api';
 
-
 export default class PlayFeed extends Component {
     constructor(props) {
         super(props);

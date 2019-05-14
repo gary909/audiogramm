@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AudioComp from './AudioComp';
-import FormField from './Formfield';
+import AudioComp from '../AudioComp';
+import FormField from '../Formfield';
 
 /* TODO */
 /* Styling */
