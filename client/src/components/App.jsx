@@ -14,6 +14,8 @@ import Comments from './pages/Comments';
 /* import axios from 'axios'; */
 /* import Counter from './Counter'; */
 
+
+
 export default class App extends Component {
     constructor(props) {
         super(props);
@@ -80,7 +82,7 @@ export default class App extends Component {
                             <i className="far fa-comments navIcon" />
                         </NavLink>
 
-                        {/* <NavLink to="/test">Test</NavLink> */}
+                        <NavLink to="/test">Test</NavLink>
 
                         <NavLink to="/feed">
                             <i className="fas fa-rss navIcon" />
