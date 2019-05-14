@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Audio from '../Audio';
 import sound from './../../soundfiles/divver.mp3';
 import Counter from '../Counter';
+import PlayFeed from './PlayFeed';
 
 export default class Feed extends Component {
     // constructor(props) {
@@ -27,9 +28,7 @@ export default class Feed extends Component {
                     <Counter className="counter" />
                 </div>
 
-                <audio controls className="audContrl">
-                    <source src={sound} type="audio/mpeg" />
-                </audio>
+                <PlayFeed />
             </div>
         );
     }
