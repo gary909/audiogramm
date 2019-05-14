@@ -29,7 +29,7 @@ export default class Comments extends Component {
                         name="comment"
                         type="text"
                     />
-                    <button class="comments-button" type="submit">
+                    <button className="comments-button" type="submit">
                         post
                     </button>
                 </form>
