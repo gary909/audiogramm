@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../api';
-import PlayAudio from '../PlayAudio';
+
 
 export default class PlayFeed extends Component {
     constructor(props) {
