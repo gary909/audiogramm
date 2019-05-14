@@ -72,7 +72,12 @@ export default class Example extends React.Component {
                     ><i class="fas fa-microphone"></i>
                         Record
                     </button>
-                    <button className="recButton"><i class="far fa-save"></i> Save</button>
+                    <button className="recButton"
+                    // type="button" onClick={() => browserHistory.push('/Search')}
+                    // onMouseDown={window.location = '/Search'}
+                    /* onMouseDown={this.startCountDown} */
+                    // onMouseUp={window.location = '/Search'}
+                    ><i class="far fa-save"></i> Save</button>
                     {/* 
                     <button onClick={this.startRecording} type="button">
                         Start
