@@ -50,7 +50,7 @@ export default class Signup extends Component {
                     />{' '}
                     <br />
                     <br />
-                    <div className="name">
+                    <form className="name">
                         {' '}
                         Name:{' '}
                         <input
@@ -60,7 +60,7 @@ export default class Signup extends Component {
                             name="name"
                             onChange={this.handleInputChange}
                         />{' '}
-                    </div>
+                    </form>
                     <br />
                     Password:{' '}
                     <input
