@@ -83,9 +83,16 @@ export default {
             .catch(errHandler);
     },
 
-    getAudios() {
+    getAudios(username) {
         return service
-            .get('/upload')
+            .get(username ? `/upload?username=${username}` : '/upload')
+            .then(res => res.data)
+            .catch(errHandler);
+    },
+
+    getComments(audioId) {
+        return service
+            .get(`/comments?audioId=${audioId}`)
             .then(res => res.data)
             .catch(errHandler);
     },

@@ -114,10 +114,7 @@ export default class Example extends React.Component {
                     </button>
 
                     <button className="recButton popup" onClick={this.handleClick}>
-                        <i className="far fa-save" /> Save{' '}
-                        <span className="popuptext" id="myPopup">
-                            Popup text...
-                        </span>
+                        <i className="far fa-save" /> Save <span className="popuptext" id="myPopup" />
                     </button>
 
                     {/* 

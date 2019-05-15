@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AudioComp from '../AudioComp';
 import FormField from '../Formfield';
+import { Link } from 'react-router-dom';
 import api from '../../api';
 
 /* TODO */
@@ -57,14 +58,19 @@ export default class Search extends Component {
                     .filter(el => el.hashtag.toLowerCase().includes(this.state.search.toLowerCase()))
                     .map((el, i) => {
                         return (
-                            <AudioComp
-                                key={i}
-                                backgroundNr={i}
-                                hashtag={el.hashtag}
-                                user={el.userId}
-                                url={el.videoURL}
-                                likes={el.likes}
-                            />
+                            <Link
+                                to={'/playfeed/' + el.userId.username}
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                <AudioComp
+                                    key={i}
+                                    backgroundNr={i}
+                                    hashtag={el.hashtag}
+                                    user={el.userId}
+                                    url={el.videoURL}
+                                    likes={el.likes}
+                                />
+                            </Link>
                         );
                     })}
                 <p>I'm searching for a friend</p>

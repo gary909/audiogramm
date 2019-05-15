@@ -74,7 +74,12 @@ export default class App extends Component {
                         <Route path="/feed" component={Feed} />
                         <Route path="/search" component={Search} />
                         <Route path="/profile" component={Profile} />
-                        <Route path="/playfeed" component={PlayFeed} />
+                        <Route
+                            path="/playfeed"
+                            exact
+                            render={props => <PlayFeed key="1" {...props} />}
+                        />
+                        <Route path="/playfeed/:username" render={props => <PlayFeed {...props} />} />
                         <Route render={() => <h2>404</h2>} />
                     </Switch>
                 </div>

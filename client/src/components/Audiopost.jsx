@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
-import PlayFeed from './pages/PlayFeed';
 import Comments from './pages/Comments';
+import Counter from './Counter';
 
 export default class Audiopost extends Component {
     render() {
-        console.log(this.props.data);
+        console.log(this.props.audio);
+
         return (
             <div>
-                <div>Username Hashtag</div>
-                <div>Likes</div>
-                <div>Comments (Usernames : Comment)</div>
+                <audio controls className="audContrl">
+                    <source src={this.props.audio.videoURL} type="audio/mpeg" />
+                </audio>
+
                 <div>
-                    <Comments />
+                    <p>{this.props.audio.userId && this.props.audio.userId.username}</p>
+                    {this.props.audio.hashtag}
+                </div>
+
+                <div>
+                    <Comments audio={this.props.audio} />
                 </div>
             </div>
         );
