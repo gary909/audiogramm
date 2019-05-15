@@ -6,12 +6,13 @@ export default class Signup extends Component {
         super(props);
         this.state = {
             username: '',
-            name: '',
+            email: '',
             password: '',
             image: '',
             message: null
         };
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleInputChange(event) {
@@ -24,18 +25,18 @@ export default class Signup extends Component {
         e.preventDefault();
         let data = {
             username: this.state.username,
-            name: this.state.name,
+            email: this.state.email,
             password: this.state.password
         };
         api.signup(data)
             .then(result => {
-                console.log('SUCCESS!');
-                this.props.history.push('/'); // Redirect to the home page
+                this.props.history.push('/profile'); // Redirect to the home page
             })
             .catch(err => this.setState({ message: err.toString() }));
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="signup">
                 {/* <h4>Signup</h4> */}
@@ -50,14 +51,15 @@ export default class Signup extends Component {
                     />{' '}
                     <br />
                     <br />
-                    <form className="name">
+                    <form className="email">
                         {' '}
-                        Name:{' '}
+                        Email:{' '}
                         <input
                             className="textfieldname searchBar"
-                            type="text"
-                            value={this.state.name}
-                            name="name"
+                            type="email"
+                            pattern="[^ @]*@[^ @]*"
+                            value={this.state.email}
+                            name="email"
                             onChange={this.handleInputChange}
                         />{' '}
                     </form>

@@ -12,6 +12,7 @@ export default class PlayFeed extends Component {
         };
     }
     render() {
+        console.log(this.props);
         const arrayCopy = this.state.audios.slice();
         arrayCopy.reverse();
         return (

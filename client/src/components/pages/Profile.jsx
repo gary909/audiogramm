@@ -1,34 +1,44 @@
 import React, { Component } from 'react';
 import api from '../../api';
 
-export default class Secret extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            secret: null,
-            message: null
-        };
+class Profile extends Component {
+    state = {
+        photo: '',
+        username: '',
+        email: '',
+        location: 'New York, USA'
+    };
+
+    componentDidMount() {
+        api.getProfile().then(data => {
+            this.setState({
+                photo: data.photo,
+                username: data.username,
+                email: data.email
+            });
+        });
     }
+
     render() {
         return (
-            <div className="Profile">
-                <h4>Profile</h4>
-                <div>
-                    <p>uplodad picture</p>
-                </div>
-                <div>
-                    <p>Hello {this.state.username}</p>
-                </div>
-
-                <div className="result">{this.state.secret}</div>
-
-                {this.state.message && <div className="info info-danger">{this.state.message}</div>}
+            <div style={{ margin: '0 auto', width: '100%' }}>
+                {/* <UserProfile photo={photo} userName={userName} location={location} /> */}
+                <img src={this.state.photo} alt="profile" />
+                <h4>
+                    <span>username: </span>
+                    {this.state.username}
+                </h4>
+                <p>
+                    <span>email: </span>
+                    {this.state.email}
+                </p>
+                <p>
+                    <span>location: </span>
+                    {this.state.location}
+                </p>
             </div>
         );
     }
-    componentDidMount() {
-        api.getSecret()
-            .then(data => this.setState({ secret: data.secret }))
-            .catch(err => this.setState({ message: err.toString() }));
-    }
 }
+
+export default Profile;

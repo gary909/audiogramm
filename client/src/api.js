@@ -109,5 +109,12 @@ export default {
             .post('/comments', data)
             .then(res => res.data)
             .catch(errHandler);
+    },
+
+    getProfile() {
+        return service
+            .get('/profile')
+            .then(res => res.data)
+            .catch(errHandler);
     }
 };

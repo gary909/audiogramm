@@ -12,9 +12,9 @@ export default class Home extends Component {
         return (
             <div className="Home">
                 <h3>Audiogramm is a never heard audio-sharing community. </h3>
-                <Signup />
+                <Signup {...this.props} />
                 <p>Already part of the long tail?</p>
-                <Login />
+                <Login {...this.props} />
             </div>
         );
     }

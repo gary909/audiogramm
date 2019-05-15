@@ -14,7 +14,8 @@
     "react-player": "^1.11.0",
     "react-responsive-music-player": "^0.4.3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.5"
+    "react-scripts": "^2.1.5",
+    "react-user-profile": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
