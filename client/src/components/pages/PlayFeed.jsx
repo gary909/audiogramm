@@ -7,14 +7,17 @@ export default class PlayFeed extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            audios: []
+            audios: [],
+            username: ''
         };
     }
     render() {
+        const arrayCopy = this.state.audios.slice();
+        arrayCopy.reverse();
         return (
             <div className="PlayFeed">
                 <h4>List of Audios</h4>
-                {this.state.audios.map(audioObj => (
+                {arrayCopy.map(audioObj => (
                     // <audio controls className="audContrl">
                     //     <source src={el.videoURL} type="audio/mpeg" />
                     // </audio>
@@ -26,7 +29,9 @@ export default class PlayFeed extends Component {
     }
 
     fetchAudios = () => {
-        api.getAudios()
+        // pass a parameter to the getAudios function
+        // so that we get the audios only for the user whose username is in the url
+        api.getAudios(this.props.match.params.username)
             .then(audios => {
                 console.log('audios');
                 console.log(audios);

@@ -26,8 +26,8 @@ export default class Comments extends Component {
     postComments = () => {
         api.addComments({
             comment: this.state.comment,
-            audioId: this.props.audio._idç
-        });
+            audioId: this.props.audio._id
+        }).then(() => this.fetchComments());
     };
 
     fetchComments = () => {
@@ -47,18 +47,18 @@ export default class Comments extends Component {
     }
 
     render() {
-        console.log(this.state.comment);
         return (
             <div className="comments">
-                <div>
+                <div class="comments-style">
                     {this.state.comments.map(commentObj => {
                         console.log('Was ist da');
                         console.log(commentObj);
                         return (
-                            <p>
-                                {commentObj.comment}
-                                {commentObj.owner.username}
-                            </p>
+                            <div class="comments">
+                                <p>
+                                    {commentObj.owner.username}: {commentObj.comment}
+                                </p>
+                            </div>
                         );
                     })}
                 </div>

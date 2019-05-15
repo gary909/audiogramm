@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Audio = require('../models/Audio');
+const User = require('../models/User');
 
 // include CLOUDINARY:
 const uploader = require('../configs/cloudinary-setup');
@@ -17,10 +18,14 @@ router.post('/upload', uploader.single('videoURL'), (req, res, next) => {
 });
 
 router.get('/upload', (req, res, next) => {
-    Audio.find({
-        userId: req.user._id
-    }).then(results => {
-        res.json(results);
+    User.findOne({ username: req.query.username || req.user.username }).then(user => {
+        Audio.find({
+            userId: user._id
+        })
+            .populate('userId')
+            .then(results => {
+                res.json(results);
+            });
     });
 });
 
@@ -28,9 +33,11 @@ router.get('/upload', (req, res, next) => {
 
 router.get('/getall-audio', (req, res, next) => {
     console.log('audio ');
-    Audio.find({}).then(results => {
-        res.json(results);
-    });
+    Audio.find({})
+        .populate('userId')
+        .then(results => {
+            res.json(results);
+        });
 });
 
 // get route to get all audio file and send it as json to the front end

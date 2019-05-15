@@ -11,10 +11,12 @@ export default class Audiopost extends Component {
                 <audio controls className="audContrl">
                     <source src={this.props.audio.videoURL} type="audio/mpeg" />
                 </audio>
-                <div>Test</div>
-                <div>Username {this.props.audio.hashtag}</div>
 
-                <div>Comments (Usernames : Comment)</div>
+                <div>
+                    <p>{this.props.audio.userId && this.props.audio.userId.username}</p>
+                    {this.props.audio.hashtag}
+                </div>
+
                 <div>
                     <Comments audio={this.props.audio} />
                 </div>
