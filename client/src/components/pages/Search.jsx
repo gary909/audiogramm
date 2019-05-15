@@ -5,7 +5,7 @@ import api from '../../api';
 
 /* TODO */
 /* Styling */
-/* Explain to Sylvie what we just did */
+/* Explain to Sylvie what we just did - Jaaaaaaaaa */
 
 export default class Search extends Component {
     constructor(props) {
