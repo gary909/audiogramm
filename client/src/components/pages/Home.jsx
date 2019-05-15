@@ -11,10 +11,11 @@ export default class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <h3>Audiogramm is a never heard audio-sharing community. </h3>
+                <h4>Audiogramm is a never heard audio-sharing community. </h4>
                 <Signup {...this.props} />
                 <p>Already part of the long tail?</p>
                 <Login {...this.props} />
+                <br></br><br></br><br></br>
             </div>
         );
     }

@@ -22,6 +22,7 @@ class Profile extends Component {
     render() {
         return (
             <div style={{ margin: '0 auto', width: '100%' }}>
+                <br></br><br></br><br></br>
                 {/* <UserProfile photo={photo} userName={userName} location={location} /> */}
                 <img src={this.state.photo} alt="profile" />
                 <h4>
@@ -36,6 +37,7 @@ class Profile extends Component {
                     <span>location: </span>
                     {this.state.location}
                 </p>
+                <br></br><br></br><br></br>
             </div>
         );
     }

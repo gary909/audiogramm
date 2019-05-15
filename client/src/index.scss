@@ -188,6 +188,20 @@ body {
 }
 
 // --------------------
+// Style for the text on the test homepage
+.textIntro {
+    p {
+        font-family: 'Raleway', sans-serif;
+        color: ivory;
+        font-size: calc(8px + 1vw);
+        margin: 20px;
+        text-align: left;
+        margin-top: 10%;
+        margin-left: 21%;
+    }
+}
+
+// --------------------
 // Style for Test component
 .Test {
     p {
@@ -381,8 +395,13 @@ body {
     border-radius: 5px 5px 5px 5px;
     outline: none;
     color: #9dbfaf;
-    box-shadow: 0 0 25px rgba(255, 0, 221, 0.8); // Schon ODER was?!? Gives bottom Nav panel a shadow
+    box-shadow: 0 0 10px rgba(255, 0, 221, 0.8); // Schon ODER was?!? Gives bottom Nav panel a shadow
 }
 
 .comments-style {
+}
+
+.titleImage {
+    width: 100%;
+    height: auto;
 }

@@ -22,6 +22,7 @@ export default class Feed extends Component {
                 <h4>Home</h4>
                 <p>Record audio hear (sic)</p>
                 <Audio />
+                <br></br><br></br><br></br>
             </div>
         );
     }
