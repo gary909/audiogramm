@@ -17,7 +17,7 @@ import AddHashtag from './pages/AddHashtag';
 /* import Counter from './Counter'; */
 
 /* TODO WEDNESDAY */
-// FIX FOOTER (Gary)
+// FIX FOOTER (Gary) -- FIXED
 // POPULATE ID IN SEARCH COMPONENT (Gary)
 // LINK USER NAME IN SEARCH COMPONENT -> FEED (Gary)
 // PUT BUTTON SEARCH COMPONENT (Gary)
