@@ -312,8 +312,6 @@ body {
     
 }
 
-<<<<<<< HEAD
-=======
 
 .hashtag-field {
     color: grey;
@@ -328,45 +326,21 @@ body {
 }
 
 
->>>>>>> 7b56f5fa63197f53b188763724ef43a38c38d12a
 //**********TEXT BOX STYLING**********
 .search {
     // width: 100%;
     position: relative;
-<<<<<<< HEAD
-    display: flex;
-}
-
-.searchTerm {
-    width: 100%;
-    border: 3px solid #00b4cc;
-=======
     // display: flex;
   }
   
   .searchTerm {
     width: 40%;
     border: 3px solid rgb(41, 28, 224);
->>>>>>> 7b56f5fa63197f53b188763724ef43a38c38d12a
     border-right: none;
     padding: 5px;
     height: 20px;
     border-radius: 5px 0 0 5px;
     outline: none;
-<<<<<<< HEAD
-    color: #9dbfaf;
-}
-
-.searchTerm:focus {
-    color: #00b4cc;
-}
-
-.searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00b4cc;
-    background: #00b4cc;
-=======
     color: #9DBFAF;
   }
   
@@ -379,33 +353,20 @@ body {
     height: 35px;
     border: 2px solid rgb(41, 28, 224);
     background: rgb(41, 28, 224);
->>>>>>> 7b56f5fa63197f53b188763724ef43a38c38d12a
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-<<<<<<< HEAD
-    font-size: 20px;
-}
-
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-=======
     font-size: 16px;
   }
   
   /*Resize the wrap to see the search bar change!*/
   .wrap{
->>>>>>> 7b56f5fa63197f53b188763724ef43a38c38d12a
     width: 30%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-<<<<<<< HEAD
-}
-//**********END OF TEXT BOX STYLING**********
-=======
   }
   //**********END OF TEXT BOX STYLING**********
 
@@ -422,4 +383,3 @@ body {
     box-shadow: 0 0 25px rgba(255, 0, 221, 0.8); // Schon ODER was?!? Gives bottom Nav panel a shadow
   }
 
->>>>>>> 7b56f5fa63197f53b188763724ef43a38c38d12a

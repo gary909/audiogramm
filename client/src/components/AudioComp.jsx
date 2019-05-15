@@ -9,7 +9,7 @@ export default class AudioComp extends Component {
     }
   }
   render() {
-    let background = ["./images/wav1.png", "./images/wav2.png", "./images/wav3.png", "./images/wav4.png", "./images/wav5.png", "./images/wav6.png"]
+    let background = ["./images/fineWav1.png", "./images/fineWav2.png", "./images/colWav.png", "./images/colorWav4.png", "./images/colorWav5.png", "./images/colorWav6.png"]
     console.log(this.props.backgroundNr)
     return (
       <div style={{
