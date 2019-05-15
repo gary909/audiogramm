@@ -3,7 +3,8 @@ import api from '../../api';
 
 export default class Comments extends Component {
     state = {
-        comment: ''
+        comment: '',
+        comments: []
     };
 
     handleChange = event => {
@@ -24,16 +25,43 @@ export default class Comments extends Component {
 
     postComments = () => {
         api.addComments({
-            comment: this.state.comment
+            comment: this.state.comment,
+            audioId: this.props.audio._idç
         });
     };
+
+    fetchComments = () => {
+        api.getComments(this.props.audio._id)
+            .then(comments => {
+                console.log('comments');
+                console.log(comments);
+                this.setState({
+                    comments: comments
+                });
+            })
+            .catch(err => console.log(err));
+    };
+
+    componentDidMount() {
+        this.fetchComments();
+    }
 
     render() {
         console.log(this.state.comment);
         return (
             <div className="comments">
-                <h4>It's not for me to say!</h4>
-                <p>Comment all you bloody like</p>
+                <div>
+                    {this.state.comments.map(commentObj => {
+                        console.log('Was ist da');
+                        console.log(commentObj);
+                        return (
+                            <p>
+                                {commentObj.comment}
+                                {commentObj.owner.username}
+                            </p>
+                        );
+                    })}
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <input
                         className="comments-field searchTerm"

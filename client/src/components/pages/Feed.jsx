@@ -23,10 +23,6 @@ export default class Feed extends Component {
                 <p>Record audio hear (sic)</p>
                 <Audio />
 
-                <div>
-                    <Counter className="counter" />
-                </div>
-
                 <PlayFeed />
             </div>
         );

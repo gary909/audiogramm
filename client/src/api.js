@@ -90,6 +90,13 @@ export default {
             .catch(errHandler);
     },
 
+    getComments(audioId) {
+        return service
+            .get(`/comments?audioId=${audioId}`)
+            .then(res => res.data)
+            .catch(errHandler);
+    },
+
     getAllAudios() {
         return service
             .get('/getall-audio')
