@@ -8,6 +8,7 @@ const uploader = require('../configs/cloudinary-setup');
 router.post('/upload', uploader.single('videoURL'), (req, res, next) => {
     Audio.create({
         videoURL: req.file.url,
+        hashtag: req.body.hashtag,
         userId: req.user._id
     }).then(() => console.log('added'));
     // get secure_url from the file object and save it in the
@@ -19,6 +20,15 @@ router.get('/upload', (req, res, next) => {
     Audio.find({
         userId: req.user._id
     }).then(results => {
+        res.json(results);
+    });
+});
+
+/* get all audiofiles */
+
+router.get('/getall-audio', (req, res, next) => {
+    console.log('audio ');
+    Audio.find({}).then(results => {
         res.json(results);
     });
 });

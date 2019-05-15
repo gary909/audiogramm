@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 class FormField extends Component {
     render() {
         return (
@@ -17,4 +17,4 @@ class FormField extends Component {
     }
 }
 
-export default FormField; 
+export default FormField;

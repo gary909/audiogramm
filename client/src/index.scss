@@ -309,9 +309,7 @@ body {
 
 .comments {
     margin-top: 150px;
-    
 }
-
 
 .hashtag-field {
     color: grey;
@@ -322,18 +320,17 @@ body {
 }
 
 .name {
-    margin-left: 15px // This keeps the name section of the login form straight :-)
+    margin-left: 15px; // This keeps the name section of the login form straight :-)
 }
-
 
 //**********TEXT BOX STYLING**********
 .search {
     // width: 100%;
     position: relative;
     // display: flex;
-  }
-  
-  .searchTerm {
+}
+
+.searchTerm {
     width: 40%;
     border: 3px solid rgb(41, 28, 224);
     border-right: none;
@@ -341,14 +338,14 @@ body {
     height: 20px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #9DBFAF;
-  }
-  
-  .searchTerm:focus{
+    color: #9dbfaf;
+}
+
+.searchTerm:focus {
     color: rgb(41, 28, 224);
-  }
-  
-  .searchButton {
+}
+
+.searchButton {
     width: 60px;
     height: 35px;
     border: 2px solid rgb(41, 28, 224);
@@ -358,19 +355,19 @@ body {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
     width: 30%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  //**********END OF TEXT BOX STYLING**********
+}
+//**********END OF TEXT BOX STYLING**********
 
-  .searchBar {
+.searchBar {
     width: 40%;
     border: 3px solid rgb(255, 11, 235);
     // border-right: none;
@@ -379,7 +376,6 @@ body {
     height: 20px;
     border-radius: 5px 5px 5px 5px;
     outline: none;
-    color: #9DBFAF;
+    color: #9dbfaf;
     box-shadow: 0 0 25px rgba(255, 0, 221, 0.8); // Schon ODER was?!? Gives bottom Nav panel a shadow
-  }
-
+}

@@ -90,9 +90,14 @@ export default {
             .catch(errHandler);
     },
 
+    getAllAudios() {
+        return service
+            .get('/getall-audio')
+            .then(res => res.data)
+            .catch(errHandler);
+    },
 
-
-    addcomment(data) {
+    addComments(data) {
         return service
             .post('/comments', data)
             .then(res => res.data)

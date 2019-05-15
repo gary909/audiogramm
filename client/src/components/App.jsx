@@ -16,6 +16,16 @@ import AddHashtag from './pages/AddHashtag';
 /* import axios from 'axios'; */
 /* import Counter from './Counter'; */
 
+/* TODO WEDNESDAY */
+// FIX FOOTER (Gary)
+// POPULATE ID IN SEARCH COMPONENT (Gary)
+// LINK USER NAME IN SEARCH COMPONENT -> FEED (Gary)
+// PUT BUTTON SEARCH COMPONENT (Gary)
+// AUDIO POST COMPONENT (Sylvie)
+// Audioplayer, username, hashtag, likes, commentslist
+// ONSTOP-FIX, POST-HASHTAG (Sylvie)
+// USER SETUP PROFIL
+
 export default class App extends Component {
     constructor(props) {
         super(props);

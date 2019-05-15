@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Audiopost from '../Audiopost';
 import api from '../../api';
 
 export default class PlayFeed extends Component {
@@ -13,9 +14,10 @@ export default class PlayFeed extends Component {
             <div className="PlayFeed">
                 <h4>List of Audios</h4>
                 {this.state.videoURL.map(el => (
-                    <audio controls className="audContrl">
-                        <source src={el.videoURL} type="audio/mpeg" />
-                    </audio>
+                    // <audio controls className="audContrl">
+                    //     <source src={el.videoURL} type="audio/mpeg" />
+                    // </audio>
+                    <Audiopost data={el} />
                     // <li key={c._id}>{c.videoURL}</li>
                 ))}
             </div>
