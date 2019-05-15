@@ -89,15 +89,15 @@ export default {
             .then(res => res.data)
             .catch(errHandler);
     },
-<<<<<<< HEAD
+
+    getAllAudios() {
+        return service
+            .get('/getall-audio')
+            .then(res => res.data)
+            .catch(errHandler);
+    },
 
     addComments(data) {
-=======
-
-
-
-    addcomment(data) {
->>>>>>> 7b56f5fa63197f53b188763724ef43a38c38d12a
         return service
             .post('/comments', data)
             .then(res => res.data)

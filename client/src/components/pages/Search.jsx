@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AudioComp from '../AudioComp';
 import FormField from '../Formfield';
+import api from '../../api';
 
 /* TODO */
 /* Styling */
@@ -19,26 +20,12 @@ export default class Search extends Component {
     the search will filter out the correct hashtags */
 
         /* Fake data. Must be changed when cloudinary is set up */
-        let data0 = {
-            hashTag: 'FullofEnergie',
-            userId: 'Sylvie',
-            likes: '92813'
-        };
-        let data1 = {
-            hashTag: 'BrilliantMood',
-            userId: 'Gary',
-            likes: '12331'
-        };
-        let data2 = {
-            hashTag: 'Thor',
-            userId: 'Thor',
-            likes: '10240813'
-        };
 
-        /* Once the data comes in from the data, put it in the state in the apiHash state */
-        this.setState({
-            apiHash: [...this.state.apiHash, data0, data1, data2]
-        });
+        api.getAllAudios()
+            .then(data => this.setState({ apiHash: data }))
+            .catch(err => this.setState({ message: err.toString() }));
+
+        console.log(this.state.apiHash);
     }
 
     /* takes care of whatever is being written in the searchinput and sets it to the state */
@@ -49,6 +36,7 @@ export default class Search extends Component {
     };
 
     render() {
+        console.log(this.state.apiHash);
         return (
             <div className="Search">
                 <h4>Find Me Here</h4>
@@ -65,21 +53,16 @@ export default class Search extends Component {
                     />
                 </div>
 
-                {/* 
-        1. Looks into the array that contains all the info from Cloudinary
-        2. Filters out everything that doesn't match with what is in the search-input
-        2.5 is .toLowerCase() so it's case insensitive
-        4. maps over remaining elements (which are not filtered out) and renders them to the page
-        */}
                 {this.state.apiHash
-                    .filter(el => el.hashTag.toLowerCase().includes(this.state.search.toLowerCase()))
+                    .filter(el => el.hashtag.toLowerCase().includes(this.state.search.toLowerCase()))
                     .map((el, i) => {
                         return (
                             <AudioComp
                                 key={i}
                                 backgroundNr={i}
                                 hashtag={el.hashtag}
-                                user={el.user}
+                                user={el.userId}
+                                url={el.videoURL}
                                 likes={el.likes}
                             />
                         );

@@ -15,7 +15,7 @@ export default class Comments extends Component {
         event.preventDefault();
         this.postComments();
         this.setState({ comment: '' });
-        this.props.history.push('/playfeed');
+        /* this.props.history.push('/playfeed'); */
     };
 
     handleClick = event => {

@@ -5,17 +5,20 @@ import axios from 'axios';
 /* import { maxHeaderSize } from 'http';
  */
 
-
 export default class Example extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             record: false,
-            countDownSeconds: 10
+            countDownSeconds: 10,
+            hashtag: ''
         };
     }
 
-
+    handleChange = event => {
+        const { value } = event.target;
+        this.setState({ hashtag: value });
+    };
 
     startRecording = () => {
         let seconds = this.state.countDownSeconds;
@@ -52,20 +55,30 @@ export default class Example extends React.Component {
         console.log('chunk of real-time data is: ', recordedBlob);
     }
 
-    onStop({ blob }) {
+    onStop = ({ blob }) => {
+        this.setState({ blob });
+    };
+
+    saveRecorded = () => {
+        const blob = this.state.blob;
         console.log('stop');
 
         let file = new File([blob], 'videoURL');
 
         let formData = new FormData();
         formData.append('videoURL', file);
+        formData.append('hashtag', this.state.hashtag);
 
         axios.post('http://localhost:5000/api/upload', formData, { withCredentials: true }).then(res => {
             console.log(res);
         });
         console.log('recordedBlob is: ', blob);
         console.log('formData: ', file);
-    }
+    };
+
+    handleClick = () => {
+        this.saveRecorded();
+    };
 
     render() {
         return (
@@ -79,6 +92,15 @@ export default class Example extends React.Component {
                     strokeColor="#000000"
                     backgroundColor="#FF4081" // Change the PINK wave background colour here
                 />
+                <form>
+                    <input
+                        className="comments-field searchTerm"
+                        value={this.state.hashtag}
+                        onChange={this.handleChange}
+                        name="comment"
+                        type="text"
+                    />
+                </form>
                 <div className="record-buttons">
                     <button
                         className="recButton"
@@ -92,7 +114,10 @@ export default class Example extends React.Component {
                     </button>
 
                     <button className="recButton popup" onClick={this.handleClick}>
-                        <i className="far fa-save" /> Save <span className="popuptext" id="myPopup">Popup text...</span>
+                        <i className="far fa-save" /> Save{' '}
+                        <span className="popuptext" id="myPopup">
+                            Popup text...
+                        </span>
                     </button>
 
                     {/* 
@@ -107,5 +132,3 @@ export default class Example extends React.Component {
         );
     }
 }
-
-
