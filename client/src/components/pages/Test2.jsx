@@ -12,7 +12,7 @@ export default class TextInput extends Component {
         <br></br>
         <div className="textIntro">
           <p>Be Heard.</p>
-          <audio></audio>
+          {/* <Audio /> */}
         </div>
         <br></br><br></br><br></br>
 

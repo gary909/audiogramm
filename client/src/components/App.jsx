@@ -101,7 +101,7 @@ export default class App extends Component {
                         <NavLink to="/test2">Test2</NavLink>
 
                         <NavLink to="/feed">
-                            <i className="fas fa-rss navIcon" />
+                            <i class="fas fa-microphone"></i>
                         </NavLink>
                         <NavLink to="/search">
                             <i className="fas fa-search navIcon" />{' '}
@@ -109,7 +109,7 @@ export default class App extends Component {
                         <NavLink to="/profile">
                             <i className="fas fa-users navIcon" />
                         </NavLink>
-                        <NavLink to="/playfeed"><i class="fas fa-microphone"></i></NavLink>
+                        <NavLink to="/playfeed">PlayFeed</NavLink>
                     </div>
                 </footer>
             </div>
