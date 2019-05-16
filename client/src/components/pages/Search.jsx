@@ -23,7 +23,7 @@ export default class Search extends Component {
         /* Fake data. Must be changed when cloudinary is set up */
 
         api.getAllAudios()
-            .then(data => this.setState({ apiHash: data }))
+            .then(data => this.setState({ apiHash: data.reverse() }))
             .catch(err => this.setState({ message: err.toString() }));
 
         console.log(this.state.apiHash);
@@ -80,21 +80,21 @@ export default class Search extends Component {
                                 />
                             </Link>
                         ) : (
-                                <Link
-                                    to={'/playfeed/' + el.userId.username}
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    <AudioComp
-                                        key={i}
-                                        backgroundNr={i}
-                                        hashtag={el.hashtag}
-                                        user={el.userId}
-                                        url={el.videoURL}
-                                        likes={el.likes}
-                                        color="audioWrapper2"
-                                    />
-                                </Link>
-                            );
+                            <Link
+                                to={'/playfeed/' + el.userId.username}
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                <AudioComp
+                                    key={i}
+                                    backgroundNr={i}
+                                    hashtag={el.hashtag}
+                                    user={el.userId}
+                                    url={el.videoURL}
+                                    likes={el.likes}
+                                    color="audioWrapper2"
+                                />
+                            </Link>
+                        );
                     })}
             </div>
         );

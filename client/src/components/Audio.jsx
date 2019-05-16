@@ -106,6 +106,7 @@ export default class Example extends React.Component {
                     </form>
                     <div className="record-buttons">
                         <button
+                            style={{ userSelect: 'none' }}
                             className="recButton"
                             type="button"
                             onMouseDown={this.startRecording}
@@ -118,7 +119,11 @@ export default class Example extends React.Component {
                             Record
                         </button>
 
-                        <button className="recButton popup" onClick={this.handleClick}>
+                        <button
+                            style={{ userSelect: 'none' }}
+                            className="recButton popup"
+                            onClick={this.handleClick}
+                        >
                             <i className="far fa-save" /> Save{' '}
                             <span className="popuptext" id="myPopup" />
                         </button>
