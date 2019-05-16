@@ -86,7 +86,7 @@ export default class Example extends React.Component {
                 {this.state.countDownSeconds}
                 <ReactMic
                     record={this.state.record}
-                    className="sound-wave"
+                    className="sound-wavegit"
                     onStop={this.onStop}
                     onData={this.onData}
                     strokeColor="#000000"
@@ -100,7 +100,7 @@ export default class Example extends React.Component {
                             onChange={this.handleChange}
                             name="comment"
                             type="text"
-                            placeholder="insert your audio name"
+                            placeholder="insert audio name"
                         />
                     </form>
                     <div className="record-buttons">

@@ -19,7 +19,7 @@ export default class Feed extends Component {
     render() {
         return (
             <div className="Feed">
-                <h2 className="Feed-text">Record Audio here</h2>
+                <h2 className="Feed-text">record here</h2>
 
                 <Audio />
             </div>
