@@ -262,7 +262,10 @@ body {
 }
 
 .record-buttons {
-    background-color: black;
+    margin-top: 20px;
+
+    background-color: #48cbb9;
+    border-radius: 20px;
 }
 
 .counter {
@@ -374,17 +377,17 @@ audio {
 
 .searchTerm {
     width: 40%;
-    border: 3px solid rgba(228, 227, 227, 0.8);
-    border-right: none;
+    /*  border: 3px solid rgba(228, 227, 227, 0.8); */
+    border-radius: none;
     padding: 5px;
+    margin-top: 26px;
     height: 20px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
+    /* outline: none; */
     color: rgba(228, 227, 227, 0.8);
 }
 
 .searchTerm:focus {
-    color: rgba(228, 227, 227, 0.8);
+    color: black;
 }
 
 .searchButton {
@@ -411,7 +414,7 @@ audio {
 
 .searchBar {
     width: 40%;
-    border: 3px solid rgb(255, 11, 235);
+    border: 3px solid #ff8dda;
     // border-right: none;
     padding: 5px;
     margin: 5px;
@@ -470,7 +473,7 @@ audio {
     width: 100vw;
 }
 
-/* .comments-styling {
+.comments-styling {
     margin: 20px;
     background-color: #ff8dda;
     border-radius: 10px;
@@ -483,4 +486,18 @@ audio {
 .searchMain {
     display: flex;
     justify-content: center;
+}
+
+.audio-rec-wrap {
+    margin: 20px;
+    background-color: #48cbb9;
+    border-radius: 10px;
+}
+
+.Feed {
+    margin-top: 70px;
+}
+
+.Feed-text {
+    margin-bottom: 50px;
 }

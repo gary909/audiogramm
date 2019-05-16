@@ -19,10 +19,9 @@ export default class Feed extends Component {
     render() {
         return (
             <div className="Feed">
-                <h4>Home</h4>
-                <p>Record audio hear (sic)</p>
+                <h2 className="Feed-text">Record Audio here</h2>
+
                 <Audio />
-                <br></br><br></br><br></br>
             </div>
         );
     }

@@ -90,33 +90,35 @@ export default class Example extends React.Component {
                     onStop={this.onStop}
                     onData={this.onData}
                     strokeColor="#000000"
-                    backgroundColor="#FF4081" // Change the PINK wave background colour here
+                    backgroundColor="#ff8dda"
                 />
-                <form>
-                    <input
-                        className="comments-field searchTerm"
-                        value={this.state.hashtag}
-                        onChange={this.handleChange}
-                        name="comment"
-                        type="text"
-                    />
-                </form>
-                <div className="record-buttons">
-                    <button
-                        className="recButton"
-                        type="button"
-                        onMouseDown={this.startRecording}
-                        /* onMouseDown={this.startCountDown} */
-                        onMouseUp={this.stopRecording}
-                    >
-                        <i className="fas fa-microphone" />
-                        Record
-                    </button>
+                <div class="audio-rec-wrap">
+                    <form>
+                        <input
+                            className="comments-field searchTerm"
+                            value={this.state.hashtag}
+                            onChange={this.handleChange}
+                            name="comment"
+                            type="text"
+                        />
+                    </form>
+                    <div className="record-buttons">
+                        <button
+                            className="recButton"
+                            type="button"
+                            onMouseDown={this.startRecording}
+                            /* onMouseDown={this.startCountDown} */
+                            onMouseUp={this.stopRecording}
+                        >
+                            <i className="fas fa-microphone" />
+                            Record
+                        </button>
 
-                    <button className="recButton popup" onClick={this.handleClick}>
-                        <i className="far fa-save" /> Save <span className="popuptext" id="myPopup" />
-                    </button>
-
+                        <button className="recButton popup" onClick={this.handleClick}>
+                            <i className="far fa-save" /> Save{' '}
+                            <span className="popuptext" id="myPopup" />
+                        </button>
+                    </div>
                     {/* 
                     <button onClick={this.startRecording} type="button">
                         Start
