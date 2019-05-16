@@ -98,7 +98,7 @@ export default class App extends Component {
                                 </NavLink>
 
                                 <NavLink to="/feed">
-                                    <i class="fas fa-microphone" />
+                                    <i className="fas fa-microphone" />
                                 </NavLink>
                                 <NavLink to="/search">
                                     <i className="fas fa-search navIcon" />{' '}

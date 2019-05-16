@@ -31,6 +31,7 @@ export default class Search extends Component {
 
     /* takes care of whatever is being written in the searchinput and sets it to the state */
     handleSearchInput = e => {
+       console.log(this.state.search)
         this.setState({
             search: e.target.value
         });
@@ -45,15 +46,10 @@ export default class Search extends Component {
                 <div>
                     {/* Formfield component that's copied from another lab. here the user can type in whatever he or she is looking for */}
                     {/* Check out the FormField component! */}
-                    <FormField
-                        label="Audiogramm"
-                        value={this.state.search}
-                        name="search"
-                        type="text"
-                        placeholder="insert something"
-                        inputchange={e => this.handleSearchInput(e)}
-                    />
+
                 </div>
+                <input type="text" name="search" id="" value={this.state.search} placeholder='Search here' onChange={this.handleSearchInput} className='searchBar'/>
+
 
                 {this.state.apiHash
                     .filter(el => el.hashtag.toLowerCase().includes(this.state.search.toLowerCase()))

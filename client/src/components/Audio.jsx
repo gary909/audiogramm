@@ -90,7 +90,7 @@ export default class Example extends React.Component {
                     onStop={this.onStop}
                     onData={this.onData}
                     strokeColor="#000000"
-                    backgroundColor="#FF4081" // Change the PINK wave background colour here
+                    backgroundColor="#ff8dda" // Change the PINK wave background colour here
                 />
                 <form>
                     <input
