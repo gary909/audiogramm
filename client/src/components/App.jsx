@@ -49,10 +49,9 @@ export default class App extends Component {
                                 <div className="App-title">
                                     <NavLink to="/" exact>
                                         AUDIOGRAM
-                                </NavLink>
+                                    </NavLink>
                                 </div>
                             </div>
-
 
                             <div className="break" />
 
@@ -68,8 +67,6 @@ export default class App extends Component {
                                 )}
                             </div>
                         </div>
-
-
                     </header>
                     <Switch>
                         <Route path="/" exact component={Home} />
@@ -89,7 +86,7 @@ export default class App extends Component {
                         <Route path="/playfeed/:username" render={props => <PlayFeed {...props} />} />
                         <Route render={() => <h2>404</h2>} />
                     </Switch>
-                </div >
+                </div>
 
                 <footer className="nav">
                     <div className="lowNav">
@@ -98,15 +95,15 @@ export default class App extends Component {
                             <i className="fas fa-home navIcon" />
                         </NavLink>
 
-                        <NavLink to="/comments">
+                        {/*  <NavLink to="/comments">
                             <i className="far fa-comments navIcon" />
-                        </NavLink>
+                        </NavLink> */}
 
                         <NavLink to="/test">Test</NavLink>
                         <NavLink to="/test2">Test2</NavLink>
 
                         <NavLink to="/feed">
-                            <i class="fas fa-microphone"></i>
+                            <i class="fas fa-microphone" />
                         </NavLink>
                         <NavLink to="/search">
                             <i className="fas fa-search navIcon" />{' '}
@@ -117,7 +114,7 @@ export default class App extends Component {
                         <NavLink to="/playfeed">PlayFeed</NavLink>
                     </div>
                 </footer>
-            </div >
+            </div>
         );
     }
 }

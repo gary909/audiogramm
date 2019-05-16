@@ -74,7 +74,9 @@ export default class Search extends Component {
                         );
                     })}
                 <p>I'm searching for a friend</p>
-                <br></br><br></br><br></br>
+                <br />
+                <br />
+                <br />
             </div>
         );
     }
