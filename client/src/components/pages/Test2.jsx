@@ -17,6 +17,7 @@ export default class TextInput extends Component {
         </div>
         <div>
           <audio controls className="audContrl">
+            <button type="button" className="play"></button>
             {/* <source src={this.props.audio.videoURL} type="audio/mpeg" /> */}
           </audio>
 
