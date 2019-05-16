@@ -106,7 +106,7 @@ export default class Example extends React.Component {
                     </form>
                     <div className="record-buttons">
                         <button
-                            style={{ userSelect: 'none' }}
+                            style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                             className="recButton"
                             type="button"
                             onMouseDown={this.startRecording}
