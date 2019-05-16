@@ -40,6 +40,7 @@ export default class Search extends Component {
         console.log(this.state.apiHash);
         return (
             <div className="Search">
+                <br></br><br></br><br></br><br></br>
                 <h4>Find Me Here</h4>
                 <div>
                     {/* Formfield component that's copied from another lab. here the user can type in whatever he or she is looking for */}
