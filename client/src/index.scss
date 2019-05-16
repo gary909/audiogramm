@@ -374,13 +374,13 @@ audio {
 
 .searchTerm {
     width: 40%;
-    border: 3px solid rgb(41, 28, 224);
+    border: 3px solid rgba(228, 227, 227, 0.8);
     border-right: none;
     padding: 5px;
     height: 20px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #9dbfaf;
+    color: rgba(228, 227, 227, 0.8);
 }
 
 .searchTerm:focus {
