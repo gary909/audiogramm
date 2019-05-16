@@ -164,7 +164,7 @@ body {
     bottom: 0; // puts nav bar at bottom of page
     width: 100%;
     text-align: center;
-    // height: 3vw;
+    height: 8vw;
     background-color: white;
     // margin: 10px;
     padding: 10px 10px;
@@ -427,7 +427,7 @@ body {
     border: 3px solid #ff8dda;
     // border-right: none;
     padding: 5px;
-    margin: 5px;
+    margin-top: 10px;
     height: 20px;
     border-radius: 5px 5px 5px 5px;
     outline: none;
@@ -498,7 +498,7 @@ body {
 }
 
 .audio-rec-wrap {
-    margin: 20px;
+    margin: 10px;
     background-color: #48cbb9;
     border-radius: 10px;
 }

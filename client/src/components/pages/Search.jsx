@@ -45,7 +45,8 @@ export default class Search extends Component {
                 <br />
                 <br />
                 <br />
-                <h4>Find Me Here</h4>
+                <p>Looking for audio?</p>
+
                 <div>
                     {/* Formfield component that's copied from another lab. here the user can type in whatever he or she is looking for */}
                     {/* Check out the FormField component! */}
@@ -79,21 +80,21 @@ export default class Search extends Component {
                                 />
                             </Link>
                         ) : (
-                            <Link
-                                to={'/playfeed/' + el.userId.username}
-                                style={{ textDecoration: 'none', color: 'inherit' }}
-                            >
-                                <AudioComp
-                                    key={i}
-                                    backgroundNr={i}
-                                    hashtag={el.hashtag}
-                                    user={el.userId}
-                                    url={el.videoURL}
-                                    likes={el.likes}
-                                    color="audioWrapper2"
-                                />
-                            </Link>
-                        );
+                                <Link
+                                    to={'/playfeed/' + el.userId.username}
+                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                >
+                                    <AudioComp
+                                        key={i}
+                                        backgroundNr={i}
+                                        hashtag={el.hashtag}
+                                        user={el.userId}
+                                        url={el.videoURL}
+                                        likes={el.likes}
+                                        color="audioWrapper2"
+                                    />
+                                </Link>
+                            );
                     })}
             </div>
         );
