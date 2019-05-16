@@ -27,12 +27,15 @@ export default class AudioComp extends Component {
                     <img className="audioImage" src="./images/hashtag.svg" alt="Hashtag" />
                     <h2 className="audioTitle">{this.props.hashtag}</h2>
                 </div>
-                <div className="audioFooter">
+               {/*  <div className="audioFooter">
                     <div className="audioUser">{this.props.user.username}</div>
 
-                    <div className="audioLikes">{this.props.likes} likes</div>
+                    {/*   <div className="audioLikes">{this.props.likes} likes</div> */} */}
+                    <audio controls className="audContrl">
+                        <source src={this.props.url} type="audio/mpeg" />
+                    </audio>
                 </div>
-            </div>
+            
         );
     }
     componentDidMount() {
