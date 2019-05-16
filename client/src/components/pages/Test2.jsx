@@ -29,6 +29,8 @@ export default class TextInput extends Component {
           {/* <div>
             <Comments audio={this.props.audio} />
           </div> */}
+
+
         </div>
         <br></br><br></br><br></br>
 
