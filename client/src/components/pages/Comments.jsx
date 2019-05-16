@@ -33,8 +33,6 @@ export default class Comments extends Component {
     fetchComments = () => {
         api.getComments(this.props.audio._id)
             .then(comments => {
-                console.log('comments');
-                console.log(comments);
                 this.setState({
                     comments: comments
                 });
@@ -51,8 +49,6 @@ export default class Comments extends Component {
             <div className="comments">
                 <div class="comments-style">
                     {this.state.comments.map(commentObj => {
-                        console.log('Was ist da');
-                        console.log(commentObj);
                         return (
                             <div class="comments">
                                 <p>

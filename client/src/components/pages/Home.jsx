@@ -3,6 +3,7 @@ import Signup from './Signup';
 import Login from './Login';
 import FormField from '../Formfield';
 import Search from '../pages/Search';
+import { Link } from 'react-router-dom';
 export default class Home extends Component {
     // constructor(props) {
     //   super(props)
@@ -27,10 +28,7 @@ export default class Home extends Component {
                         </div>
                     </header>
                     <div>
-                        <h4>Audiogramm is a never heard audio-sharing community. </h4>
-                        <Signup {...this.props} />
-                        <p>Already part of the long tail?</p>
-                        <Login {...this.props} />
+                        <Search />
                     </div>
                 </div>
             </div>

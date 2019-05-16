@@ -33,24 +33,31 @@ export default class Login extends Component {
             <div className="Login">
                 {/* <h4>Login</h4> */}
                 <form>
-                    Username:{' '}
-                    <input
-                        type="text"
-                        className="searchBar"
-                        value={this.state.username}
-                        name="username"
-                        onChange={this.handleInputChange}
-                    />{' '}
-                    <br />
-                    Password:{' '}
-                    <input
-                        type="password"
-                        className="searchBar"
-                        value={this.state.password}
-                        name="password"
-                        onChange={this.handleInputChange}
-                    />{' '}
-                    <br />
+                    <div>
+                        <label htmlFor="username">Username:</label>
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            className="searchBar"
+                            value={this.state.username}
+                            name="username"
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password:</label>
+                    </div>
+                    <div>
+                        <input
+                            type="password"
+                            className="searchBar"
+                            value={this.state.password}
+                            name="password"
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+
                     <button className="button" onClick={e => this.handleClick(e)}>
                         Login
                     </button>

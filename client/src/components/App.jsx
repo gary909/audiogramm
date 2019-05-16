@@ -91,27 +91,32 @@ export default class App extends Component {
                 <footer className="nav">
                     <div className="lowNav">
                         <div className="App-Header" />
-                        <NavLink to="/" exact>
-                            <i className="fas fa-home navIcon" />
-                        </NavLink>
+                        {api.isLoggedIn() && (
+                            <span>
+                                <NavLink to="/" exact>
+                                    <i className="fas fa-home navIcon" />
+                                </NavLink>
 
-                        {/*  <NavLink to="/comments">
-                            <i className="far fa-comments navIcon" />
-                        </NavLink> */}
+                                <NavLink to="/feed">
+                                    <i class="fas fa-microphone" />
+                                </NavLink>
+                                <NavLink to="/search">
+                                    <i className="fas fa-search navIcon" />{' '}
+                                </NavLink>
 
-                        <NavLink to="/test">Test</NavLink>
-                        <NavLink to="/test2">Test2</NavLink>
+                                <NavLink to="/profile">
+                                    <i className="fas fa-users navIcon" />
+                                </NavLink>
 
-                        <NavLink to="/feed">
-                            <i class="fas fa-microphone" />
-                        </NavLink>
-                        <NavLink to="/search">
-                            <i className="fas fa-search navIcon" />{' '}
-                        </NavLink>
-                        <NavLink to="/profile">
-                            <i className="fas fa-users navIcon" />
-                        </NavLink>
-                        <NavLink to="/playfeed">PlayFeed</NavLink>
+                                <NavLink to="/playfeed">PlayFeed</NavLink>
+                            </span>
+                        )}
+                        {!api.isLoggedIn() && (
+                            <span>
+                                <NavLink to="/signup">Sign up</NavLink>
+                                <NavLink to="/login">Log in</NavLink>
+                            </span>
+                        )}
                     </div>
                 </footer>
             </div>

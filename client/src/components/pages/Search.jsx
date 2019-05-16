@@ -73,10 +73,6 @@ export default class Search extends Component {
                             </Link>
                         );
                     })}
-                <p>I'm searching for a friend</p>
-                <br />
-                <br />
-                <br />
             </div>
         );
     }

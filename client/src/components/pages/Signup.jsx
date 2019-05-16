@@ -41,19 +41,22 @@ export default class Signup extends Component {
             <div className="signup">
                 {/* <h4>Signup</h4> */}
                 <form>
-                    Username:{' '}
-                    <input
-                        className="textfield searchBar"
-                        type="text"
-                        value={this.state.username}
-                        name="username"
-                        onChange={this.handleInputChange}
-                    />{' '}
-                    <br />
-                    <br />
-                    <form className="email">
-                        {' '}
-                        Email:{' '}
+                    <div>
+                        <label htmlFor="username">Username:</label>
+                    </div>
+                    <div>
+                        <input
+                            className="textfield searchBar"
+                            type="text"
+                            value={this.state.username}
+                            name="username"
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="email">Email:</label>
+                    </div>
+                    <div>
                         <input
                             className="textfieldname searchBar"
                             type="email"
@@ -61,18 +64,20 @@ export default class Signup extends Component {
                             value={this.state.email}
                             name="email"
                             onChange={this.handleInputChange}
-                        />{' '}
-                    </form>
-                    <br />
-                    Password:{' '}
-                    <input
-                        className="textfield searchBar"
-                        type="password"
-                        value={this.state.password}
-                        name="password"
-                        onChange={this.handleInputChange}
-                    />{' '}
-                    <br />
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password:</label>
+                    </div>
+                    <div>
+                        <input
+                            className="textfield searchBar"
+                            type="password"
+                            value={this.state.password}
+                            name="password"
+                            onChange={this.handleInputChange}
+                        />
+                    </div>
                     <button className="button" onClick={e => this.handleClick(e)}>
                         Signup
                     </button>
