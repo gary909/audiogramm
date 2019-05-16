@@ -18,12 +18,10 @@ export default class PlayFeed extends Component {
         return (
             <div className="PlayFeed">
                 <header className="Playfeed-header">
-                    <div className="profil-name">
-                        <img src={'./images/earLogo.png'} className="profilpic" alt="profilpic" />
-                        {this.state.audios && this.state.audios[0] && (
-                            <h4 className="username">{this.state.audios[0].userId.username} </h4>
-                        )}
-                    </div>
+                    <img src={'./images/earLogo.png'} className="profilpic" alt="profilpic" />
+                    {this.state.audios && this.state.audios[0] && (
+                        <h4 className="username">{this.state.audios[0].userId.username} </h4>
+                    )}
                 </header>
 
                 <div class="playfeeds">

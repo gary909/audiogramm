@@ -60,7 +60,7 @@ export default class Comments extends Component {
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <input
-                        className="comments-field searchTerm"
+                        className="searchBar searchTerm"
                         value={this.state.comment}
                         onChange={this.handleChange}
                         name="comment"

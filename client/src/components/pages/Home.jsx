@@ -48,12 +48,7 @@ export default class Home extends Component {
                     <br />
                     <br />
 
-                    <div>
-                        <audio controls className="audContrl">
-                            <button type="button" className="play" />
-                            {/* <source src={this.props.audio.videoURL} type="audio/mpeg" /> */}
-                        </audio>
-                    </div>
+
 
                     <br />
                     <br />
@@ -62,6 +57,7 @@ export default class Home extends Component {
                         <Search />
                     </div>
                 </div>
+                <br /><br /><br /><br /><br /><br />
             </div>
         );
     }

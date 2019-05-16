@@ -21,7 +21,7 @@ export default class AudioComp extends Component {
                 /* style={{
                     backgroundImage: `url(${background[this.props.backgroundNr % background.length]})`
                 }} */
-                className="audioWrapper"
+                className={this.props.color}
             >
                 <div className="audioTitleWrapper">
                     <img className="audioImage" src="/images/hashtag.svg" alt="Hashtag" />
@@ -30,7 +30,7 @@ export default class AudioComp extends Component {
                 <div className="audioFooter">
                     <div className="audioUser">{this.props.user.username}</div>
                 </div>
-                <audio controls className="audContrl">
+                <audio controls class="audio-seek-audiopost">
                     <source src={this.props.url} type="audio/mpeg" />
                 </audio>
             </div>
