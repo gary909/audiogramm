@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import Comments from './pages/Comments';
 
 
 
@@ -12,7 +13,21 @@ export default class TextInput extends Component {
         <br></br>
         <div className="textIntro">
           <p>Be Heard.</p>
-          {/* <Audio /> */}
+
+        </div>
+        <div>
+          <audio controls className="audContrl">
+            {/* <source src={this.props.audio.videoURL} type="audio/mpeg" /> */}
+          </audio>
+
+          {/* <div>
+            <p>{this.props.audio.userId && this.props.audio.userId.username}</p>
+            {this.props.audio.hashtag}
+          </div> */}
+
+          {/* <div>
+            <Comments audio={this.props.audio} />
+          </div> */}
         </div>
         <br></br><br></br><br></br>
 
