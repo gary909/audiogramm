@@ -11,9 +11,9 @@ export default class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <h3>Audiogramm is a never heard audio-sharing community. </h3>
+                <h3>Audiogram is an audio-sharing community. Sign up to get lorem ipsum </h3>
                 <Signup {...this.props} />
-                <p>Already part of the long tail?</p>
+                <p>Already ready registered?</p>
                 <Login {...this.props} />
             </div>
         );

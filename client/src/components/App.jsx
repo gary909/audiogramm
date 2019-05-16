@@ -42,8 +42,8 @@ export default class App extends Component {
                 <div className="App">
                     <header className="App-header">
                         <div className="Title-bar">
-                            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                            {/* <h3 className="App-title" >ANKER</h3> */}
+                            <img src={logo} className="App-logo" alt="logo" />
+                            {/* /* <h3 className="App-title" >ANKER</h3> */}
                             <div className="App-title">
                                 <NavLink to="/" exact>
                                     AUDIOGRAM
@@ -66,8 +66,8 @@ export default class App extends Component {
                         </div>
                     </header>
                     <Switch>
-                        <Route path="/" exact component={Home} />
-                        <Route path="/comments" component={Comments} />
+                        ç <Route path="/" exact component={Home} />
+                        {/* <Route path="/comments" component={Comments} /> */}
                         {/* <Route path="/test" component={Test} /> */}
                         <Route path="/signup" component={Signup} />
                         <Route path="/login" component={Login} />
@@ -91,9 +91,9 @@ export default class App extends Component {
                             <i className="fas fa-home navIcon" />
                         </NavLink>
 
-                        <NavLink to="/comments">
+                        {/*  <NavLink to="/comments">
                             <i className="far fa-comments navIcon" />
-                        </NavLink>
+                        </NavLink> */}
 
                         {/* <NavLink to="/test">Test</NavLink> */}
 
