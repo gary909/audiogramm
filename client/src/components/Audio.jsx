@@ -71,7 +71,9 @@ export default class Example extends React.Component {
         formData.append('videoURL', file);
         formData.append('hashtag', this.state.hashtag);
 
-        api.postAudio(formData);
+        api.postAudio(formData).then(() => {
+            this.props.history.push('/playfeed');
+        });
 
         console.log('recordedBlob is: ', blob);
         console.log('formData: ', file);

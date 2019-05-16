@@ -75,7 +75,7 @@ export default class App extends Component {
                         <Route path="/test2" component={Test2} />
                         <Route path="/signup" component={Signup} />
                         <Route path="/login" component={Login} />
-                        <Route path="/feed" component={Feed} />
+                        <Route path="/feed" render={props => <Feed {...props} />} />
                         <Route path="/search" component={Search} />
                         {/*  <Route path="/profile" component={Profile} /> */}
                         <Route

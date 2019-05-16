@@ -21,7 +21,7 @@ export default class Feed extends Component {
             <div className="Feed">
                 <h2 className="Feed-text">record here</h2>
 
-                <Audio />
+                <Audio {...this.props} />
             </div>
         );
     }
