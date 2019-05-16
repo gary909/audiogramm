@@ -8,7 +8,7 @@ const uploader = require('../configs/cloudinary-setup');
 
 router.post('/upload', uploader.single('videoURL'), (req, res, next) => {
     Audio.create({
-        videoURL: req.file.url,
+        videoURL: req.file.secure_url,
         hashtag: req.body.hashtag,
         userId: req.user._id
     }).then(() => console.log('added'));
