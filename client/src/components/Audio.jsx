@@ -87,6 +87,7 @@ export default class Example extends React.Component {
         return (
             <div>
                 {this.state.countDownSeconds}
+                <br />
                 <ReactMic
                     record={this.state.record}
                     className="sound-wavegit"
