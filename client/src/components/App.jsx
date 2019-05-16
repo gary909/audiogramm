@@ -8,6 +8,7 @@ import api from '../api';
 // import heart from '../heart.png';
 // import logo from '../logo.png';
 import Test from './pages/Test';
+import Test2 from './pages/Test2';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
@@ -69,6 +70,7 @@ export default class App extends Component {
                         <Route path="/" exact component={Home} />
                         <Route path="/comments" component={Comments} />
                         <Route path="/test" component={Test} />
+                        <Route path="/test2" component={Test2} />
                         <Route path="/signup" component={Signup} />
                         <Route path="/login" component={Login} />
                         <Route path="/feed" component={Feed} />
@@ -96,6 +98,7 @@ export default class App extends Component {
                         </NavLink>
 
                         <NavLink to="/test">Test</NavLink>
+                        <NavLink to="/test2">Test2</NavLink>
 
                         <NavLink to="/feed">
                             <i className="fas fa-rss navIcon" />
@@ -106,7 +109,7 @@ export default class App extends Component {
                         <NavLink to="/profile">
                             <i className="fas fa-users navIcon" />
                         </NavLink>
-                        <NavLink to="/playfeed">PlayFeed</NavLink>
+                        <NavLink to="/playfeed"><i class="fas fa-microphone"></i></NavLink>
                     </div>
                 </footer>
             </div>
