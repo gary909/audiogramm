@@ -42,14 +42,17 @@ export default class App extends Component {
             <div>
                 <div className="App">
                     <header className="App-header">
-                        <div className="Title-bar">
-                            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                            {/* <h3 className="App-title" >ANKER</h3> */}
-                            <div className="App-title">
-                                <NavLink to="/" exact>
-                                    AUDIOGRAM
+                        <div className="Title-logo">
+                            <div>
+                                {/* <img src={'./images/earLogo.png'} className="earLogo" alt="logo" /> */}
+                                {/* <h3 className="App-title" >ANKER</h3> */}
+                                <div className="App-title">
+                                    <NavLink to="/" exact>
+                                        AUDIOGRAM
                                 </NavLink>
+                                </div>
                             </div>
+
 
                             <div className="break" />
 
@@ -65,6 +68,8 @@ export default class App extends Component {
                                 )}
                             </div>
                         </div>
+
+
                     </header>
                     <Switch>
                         <Route path="/" exact component={Home} />
@@ -84,7 +89,7 @@ export default class App extends Component {
                         <Route path="/playfeed/:username" render={props => <PlayFeed {...props} />} />
                         <Route render={() => <h2>404</h2>} />
                     </Switch>
-                </div>
+                </div >
 
                 <footer className="nav">
                     <div className="lowNav">
@@ -112,7 +117,7 @@ export default class App extends Component {
                         <NavLink to="/playfeed">PlayFeed</NavLink>
                     </div>
                 </footer>
-            </div>
+            </div >
         );
     }
 }
