@@ -30,7 +30,7 @@ export default class Signup extends Component {
         };
         api.signup(data)
             .then(result => {
-                this.props.history.push('/profile'); // Redirect to the home page
+                this.props.history.push('/playfeed'); // Redirect to the home page
             })
             .catch(err => this.setState({ message: err.toString() }));
     }

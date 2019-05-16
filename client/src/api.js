@@ -116,5 +116,12 @@ export default {
             .get('/profile')
             .then(res => res.data)
             .catch(errHandler);
+    },
+
+    postAudio(formData) {
+        return service
+            .post('/upload', formData)
+            .then(res => res.data)
+            .catch(errHandler);
     }
 };

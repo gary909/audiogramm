@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { ReactMic } from 'react-mic';
-import axios from 'axios';
+
+import api from '../api';
+
 /* import { set } from 'mongoose'; */
 /* import { maxHeaderSize } from 'http';
  */
@@ -69,9 +71,8 @@ export default class Example extends React.Component {
         formData.append('videoURL', file);
         formData.append('hashtag', this.state.hashtag);
 
-        axios.post('http://localhost:5000/api/upload', formData, { withCredentials: true }).then(res => {
-            console.log(res);
-        });
+        api.postAudio(formData);
+
         console.log('recordedBlob is: ', blob);
         console.log('formData: ', file);
     };
