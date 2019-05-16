@@ -18,14 +18,14 @@ export default class AudioComp extends Component {
         console.log(this.props.backgroundNr);
         return (
             <div
-                style={{
+                /* style={{
                     backgroundImage: `url(${background[this.props.backgroundNr % background.length]})`
-                }}
+                }} */
                 className="audioWrapper"
             >
                 <div className="audioTitleWrapper">
                     <img className="audioImage" src="./images/hashtag.svg" alt="Hashtag" />
-                    <h1 className="audioTitle">{this.props.hashtag}</h1>
+                    <h2 className="audioTitle">{this.props.hashtag}</h2>
                 </div>
                 <div className="audioFooter">
                     <div className="audioUser">{this.props.user.username}</div>
