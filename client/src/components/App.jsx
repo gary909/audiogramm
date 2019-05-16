@@ -7,7 +7,8 @@ import Signup from './pages/Signup';
 import api from '../api';
 // import heart from '../heart.png';
 // import logo from '../logo.png';
-// import Test from './pages/Test';
+import Test from './pages/Test';
+import Test2 from './pages/Test2';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
@@ -41,13 +42,15 @@ export default class App extends Component {
             <div>
                 <div className="App">
                     <header className="App-header">
-                        <div className="Title-bar">
-                            <img src={logo} className="App-logo" alt="logo" />
-                            {/* /* <h3 className="App-title" >ANKER</h3> */}
-                            <div className="App-title">
-                                <NavLink to="/" exact>
-                                    AUDIOGRAM
-                                </NavLink>
+                        <div className="Title-logo">
+                            <div>
+                                {/* <img src={'./images/earLogo.png'} className="earLogo" alt="logo" /> */}
+                                {/* <h3 className="App-title" >ANKER</h3> */}
+                                <div className="App-title">
+                                    <NavLink to="/" exact>
+                                        AUDIOGRAM
+                                    </NavLink>
+                                </div>
                             </div>
 
                             <div className="break" />
@@ -66,9 +69,10 @@ export default class App extends Component {
                         </div>
                     </header>
                     <Switch>
-                        ç <Route path="/" exact component={Home} />
-                        {/* <Route path="/comments" component={Comments} /> */}
-                        {/* <Route path="/test" component={Test} /> */}
+                        <Route path="/" exact component={Home} />
+                        <Route path="/comments" component={Comments} />
+                        <Route path="/test" component={Test} />
+                        <Route path="/test2" component={Test2} />
                         <Route path="/signup" component={Signup} />
                         <Route path="/login" component={Login} />
                         <Route path="/feed" component={Feed} />
@@ -95,10 +99,11 @@ export default class App extends Component {
                             <i className="far fa-comments navIcon" />
                         </NavLink> */}
 
-                        {/* <NavLink to="/test">Test</NavLink> */}
+                        <NavLink to="/test">Test</NavLink>
+                        <NavLink to="/test2">Test2</NavLink>
 
                         <NavLink to="/feed">
-                            <i className="fas fa-rss navIcon" />
+                            <i class="fas fa-microphone" />
                         </NavLink>
                         <NavLink to="/search">
                             <i className="fas fa-search navIcon" />{' '}

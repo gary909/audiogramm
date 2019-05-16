@@ -7,7 +7,7 @@ export default class Audiopost extends Component {
         console.log(this.props.audio);
 
         return (
-            <div>
+            <div class="audio-seek">
                 <audio controls className="audContrl">
                     <source src={this.props.audio.videoURL} type="audio/mpeg" />
                 </audio>

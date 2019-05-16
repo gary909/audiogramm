@@ -15,16 +15,26 @@ export default class PlayFeed extends Component {
         console.log(this.props);
         const arrayCopy = this.state.audios.slice();
         arrayCopy.reverse();
+
         return (
             <div className="PlayFeed">
-                <h4>List of Audios</h4>
-                {arrayCopy.map(audioObj => (
-                    // <audio controls className="audContrl">
-                    //     <source src={el.videoURL} type="audio/mpeg" />
-                    // </audio>
-                    <Audiopost audio={audioObj} />
-                    // <li key={c._id}>{c.videoURL}</li>
-                ))}
+                <header className="Playfeed-header">
+                    <div className="profil-name">
+                        <img src={'./images/earLogo.png'} className="profilpic" alt="profilpic" />
+                        <h4 className="username">Dave</h4>
+                    </div>
+                </header>
+
+                <div class="playfeeds">
+                    <h4>List of Audios</h4>
+                    {arrayCopy.map(audioObj => (
+                        // <audio controls className="audContrl">
+                        //     <source src={el.videoURL} type="audio/mpeg" />
+                        // </audio>
+                        <Audiopost audio={audioObj} />
+                        // <li key={c._id}>{c.videoURL}</li>
+                    ))}
+                </div>
             </div>
         );
     }
