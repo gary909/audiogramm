@@ -96,21 +96,25 @@ export default class App extends Component {
                                 {/* <NavLink to="/" exact>
                                     <i className="fas fa-home navIcon" />
                                 </NavLink> */}
+                                <div class="low-nav-icons">
+                                    <NavLink to="/feed">
+                                        <i
+                                            className="fas fa-microphone fa-2x"
+                                            style={{ height: '80px' }}
+                                        />
+                                    </NavLink>
 
-                                <NavLink to="/feed">
-                                    <i className="fas fa-microphone" style={{ height: '80px' }} />
-                                </NavLink>
-                                <NavLink to="/search">
-                                    <i className="fas fa-search navIcon" />{' '}
-                                </NavLink>
+                                    <NavLink to="/search">
+                                        <i className="fas fa-search navIcon fa-2x" />{' '}
+                                    </NavLink>
 
-                                {/* <NavLink to="/profile">
-                                    <i className="fas fa-users navIcon" />
+                                    <NavLink to="/playfeed">
+                                        <i className="fas fa-headphones-alt fa-2x" />
+                                    </NavLink>
+                                    {/* <NavLink to="/profile">
+                                    <i className="fas fa-users navIco   n" />
                                 </NavLink> */}
-
-                                <NavLink to="/playfeed">
-                                    <i className="fas fa-headphones-alt" />
-                                </NavLink>
+                                </div>
                             </span>
                         )}
                         {!api.isLoggedIn() && (

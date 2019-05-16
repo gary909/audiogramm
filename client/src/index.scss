@@ -254,11 +254,10 @@ body {
 }
 
 .audContrl {
+    padding: 10px;
     // Remove this for fully rounded courners
-    border-radius: 5px;
     margin: 5px;
     // color: black;
-    background-color: #f1f3f4;
 }
 
 .record-buttons {
@@ -332,6 +331,8 @@ body {
 .audio-seek-audiopost {
     width: 70vw;
     margin: auto;
+    background-color: #f1f3f4;
+    border-radius: 5px;
 }
 
 // audio {
@@ -507,4 +508,9 @@ body {
 
 .Feed-text {
     margin-bottom: 50px;
+}
+
+.low-nav-icons {
+    display: flex;
+    justify-content: space-evenly;
 }
