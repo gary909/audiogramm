@@ -25,7 +25,7 @@ export default class PlayFeed extends Component {
                 </header>
 
                 <div class="playfeeds">
-                    <h4>List of Audios</h4>
+                    <h4>my sounds</h4>
                     {arrayCopy.map(audioObj => (
                         // <audio controls className="audContrl">
                         //     <source src={el.videoURL} type="audio/mpeg" />

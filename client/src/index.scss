@@ -315,7 +315,7 @@ body {
 }
 
 .audioTitle {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    /*  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
 .audioImage {
@@ -333,6 +333,7 @@ body {
     margin: auto;
     background-color: #f1f3f4;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 // audio {
@@ -470,7 +471,7 @@ body {
 
 .Playfeed-header {
     width: 100%;
-
+    margin-left: 2px;
     display: flex;
     justify-content: left;
     z-index: 999999;
@@ -513,4 +514,13 @@ body {
 .low-nav-icons {
     display: flex;
     justify-content: space-evenly;
+}
+
+.audioUser {
+    margin-left: 11%;
+    margin-bottom: 2%;
+}
+
+.username {
+    padding-left: 5px;
 }
