@@ -39,6 +39,7 @@ export default class Login extends Component {
                         className="searchBar"
                         value={this.state.username}
                         name="username"
+
                         onChange={this.handleInputChange}
                     />{' '}
                     <br />

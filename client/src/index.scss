@@ -106,7 +106,7 @@ body {
     .App-header {
         position: fixed;
         width: 100%;
-        height: 20%;
+        height: 10%;
         z-index: 999;
         top: 0; // puts nav bar at bottom of page
         background-color: $primary;
@@ -407,7 +407,7 @@ body {
     border-radius: 5px 5px 5px 5px;
     outline: none;
     color: #9dbfaf;
-    box-shadow: 0 0 10px rgba(255, 0, 221, 0.8); // Schon ODER was?!? Gives bottom Nav panel a shadow
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); // Schon ODER was?!? Gives bottom Nav panel a shadow
 }
 
 // .comments-style {
@@ -461,4 +461,9 @@ body {
     flex-direction: column;
     height: auto;
     width: 20vh;
+}
+
+.searchMain {
+    display: flex;
+    justify-content: center;
 }
