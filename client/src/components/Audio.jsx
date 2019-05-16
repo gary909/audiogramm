@@ -111,6 +111,8 @@ export default class Example extends React.Component {
                             onMouseDown={this.startRecording}
                             /* onMouseDown={this.startCountDown} */
                             onMouseUp={this.stopRecording}
+                            onTouchStart={this.startRecording}
+                            onTouchEnd={this.stopRecording}
                         >
                             <i className="fas fa-microphone" />
                             Record
