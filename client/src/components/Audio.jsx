@@ -86,7 +86,7 @@ export default class Example extends React.Component {
                 {this.state.countDownSeconds}
                 <ReactMic
                     record={this.state.record}
-                    className="sound-wavegit
+                    className="sound-wave"
                     onStop={this.onStop}
                     onData={this.onData}
                     strokeColor="#000000"

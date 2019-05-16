@@ -77,7 +77,7 @@ export default class App extends Component {
                         <Route path="/login" component={Login} />
                         <Route path="/feed" component={Feed} />
                         <Route path="/search" component={Search} />
-                        <Route path="/profile" component={Profile} />
+                        {/*  <Route path="/profile" component={Profile} /> */}
                         <Route
                             path="/playfeed"
                             exact
@@ -93,22 +93,24 @@ export default class App extends Component {
                         <div className="App-Header" />
                         {api.isLoggedIn() && (
                             <span>
-                                <NavLink to="/" exact>
+                                {/* <NavLink to="/" exact>
                                     <i className="fas fa-home navIcon" />
-                                </NavLink>
+                                </NavLink> */}
 
                                 <NavLink to="/feed">
-                                    <i className="fas fa-microphone" />
+                                    <i className="fas fa-microphone" style={{ height: '80px' }} />
                                 </NavLink>
                                 <NavLink to="/search">
                                     <i className="fas fa-search navIcon" />{' '}
                                 </NavLink>
 
-                                <NavLink to="/profile">
+                                {/* <NavLink to="/profile">
                                     <i className="fas fa-users navIcon" />
-                                </NavLink>
+                                </NavLink> */}
 
-                                <NavLink to="/playfeed">PlayFeed</NavLink>
+                                <NavLink to="/playfeed">
+                                    <i className="fas fa-headphones-alt" />
+                                </NavLink>
                             </span>
                         )}
                         {!api.isLoggedIn() && (

@@ -30,34 +30,9 @@ export default class Home extends Component {
                     </div>
 
                     <div>
-                        {/* Formfield component that's copied from another lab. here the user can type in whatever he or she is looking for */}
-                        {/* Check out the FormField component! */}
-                        <form>
-                            {/* Username:{' '} */}
-                            <input
-                                className="textfield searchBar"
-                                type="text"
-                                // value={this.state.username}
-                                // name="username"
-                                placeholder="Search Anything"
-                                onChange={this.handleInputChange}
-                            />
-                        </form>
-                    </div>
-
-                    <br />
-                    <br />
-
-
-
-                    <br />
-                    <br />
-
-                    <div>
                         <Search />
                     </div>
                 </div>
-                <br /><br /><br /><br /><br /><br />
             </div>
         );
     }
