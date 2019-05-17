@@ -24,7 +24,7 @@ export default class Audiopost extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="audioWrapper" style={{ marginBottom: '50px' }}>
+                <div className="audioWrapper" style={{ marginBottom: '20px' }}>
                     <Comments audio={this.props.audio} />
                 </div>
             </div>

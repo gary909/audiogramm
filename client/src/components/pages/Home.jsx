@@ -21,7 +21,7 @@ export default class Home extends Component {
                         <div>
                             <img src={'./images/earLogo.png'} className="earLogo" alt="logo" />
                             <h3 className="App-title">AUDIOGRAM</h3>
-                            <h3>SIGN UP AND BE HEARD</h3>
+                            <h3>Sign in and be heard</h3>
                             <div className="App-title">
                                 {/* <NavLink to="/" exact>
                                         AUDIOGRAM
