@@ -5,27 +5,10 @@ import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
-// import heart from '../heart.png';
-// import logo from '../logo.png';
-import Test from './pages/Test';
-import Test2 from './pages/Test2';
 import Feed from './pages/Feed';
 import Search from './pages/Search';
 import Comments from './pages/Comments';
 import PlayFeed from './pages/PlayFeed';
-import AddHashtag from './pages/AddHashtag';
-/* import axios from 'axios'; */
-/* import Counter from './Counter'; */
-
-/* TODO WEDNESDAY */
-// FIX FOOTER (Gary) -- FIXED
-// POPULATE ID IN SEARCH COMPONENT (Gary)
-// LINK USER NAME IN SEARCH COMPONENT -> FEED (Gary)
-// PUT BUTTON SEARCH COMPONENT (Gary)
-// AUDIO POST COMPONENT (Sylvie)
-// Audioplayer, username, hashtag, likes, commentslist
-// ONSTOP-FIX, POST-HASHTAG (Sylvie)
-// USER SETUP PROFIL
 
 export default class App extends Component {
     constructor(props) {
@@ -44,8 +27,6 @@ export default class App extends Component {
                     <header className="App-header">
                         <div className="Title-logo">
                             <div>
-                                {/* <img src={'./images/earLogo.png'} className="earLogo" alt="logo" /> */}
-                                {/* <h3 className="App-title" >ANKER</h3> */}
                                 <div className="App-title">
                                     <NavLink to="/" exact>
                                         AUDIOGRAM

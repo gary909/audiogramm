@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import AudioComp from '../AudioComp';
-import FormField from '../Formfield';
+
 import { Link } from 'react-router-dom';
 import api from '../../api';
-
-/* TODO */
-/* Styling */
-/* Explain to Sylvie what we just did - Jaaaaaaaaa */
 
 export default class Search extends Component {
     constructor(props) {
@@ -17,11 +13,6 @@ export default class Search extends Component {
         };
     }
     componentDidMount() {
-        /* Here comes an api call to cloudinary that searches for all the audiofiles and sets to state. 
-    the search will filter out the correct hashtags */
-
-        /* Fake data. Must be changed when cloudinary is set up */
-
         api.getAllAudios()
             .then(data => this.setState({ apiHash: data.reverse() }))
             .catch(err => this.setState({ message: err.toString() }));

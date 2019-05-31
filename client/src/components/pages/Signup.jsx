@@ -39,7 +39,6 @@ export default class Signup extends Component {
         console.log(this.props);
         return (
             <div className="signup">
-                {/* <h4>Signup</h4> */}
                 <form>
                     <div>
                         <label htmlFor="username">Username:</label>

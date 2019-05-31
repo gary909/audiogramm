@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Audiopost from '../Audiopost';
 import api from '../../api';
-import Audio from '../Audio';
 
 export default class PlayFeed extends Component {
     constructor(props) {
@@ -27,11 +26,7 @@ export default class PlayFeed extends Component {
                 <div class="playfeeds">
                     <h4>my sounds</h4>
                     {arrayCopy.map(audioObj => (
-                        // <audio controls className="audContrl">
-                        //     <source src={el.videoURL} type="audio/mpeg" />
-                        // </audio>
                         <Audiopost audio={audioObj} {...this.state} />
-                        // <li key={c._id}>{c.videoURL}</li>
                     ))}
                 </div>
             </div>
