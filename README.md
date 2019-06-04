@@ -9,7 +9,7 @@ React, Node.js, Express.js and MongoDB
 A beta version can be found here https://audiogramm.herokuapp.com/
 (please note Safari is not yet supported)
 
-![Alt text](client\public\images\audiopic1.png?raw=true "audiogram")
-![Alt text](client\public\images\audiopic2.png?raw=true "audiogram")
-![Alt text](client\public\images\audiopic3.png?raw=true "audiogram")
-![Alt text](client\public\images\audiopic4.png?raw=true "audiogram")
+![Alt text](\images\audiopic1.png?raw=true "audiogram")
+![Alt text](\images\audiopic2.png?raw=true "audiogram")
+![Alt text](\images\audiopic3.png?raw=true "audiogram")
+![Alt text](\images\audiopic4.png?raw=true "audiogram")
